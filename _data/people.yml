@@ -64,7 +64,7 @@ phd-phuc:
 phd-sunbing:
     display_name: "SUN Bing"
     role: grad
-    image: /img/people/sunyang.jpg
+    image: /img/people/sunbing.jpg
 
 phd-sunyang:
     display_name: "SUN Yang"
