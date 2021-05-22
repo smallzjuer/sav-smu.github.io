@@ -29,11 +29,27 @@ postdoc-yuqi:
     role: postdoc
     image: /img/people/yuqi.jpg
 
+postdoc-jiaying:
+    display_name: "LI Jiaying"
+    webpage: "https://scholar.google.com/citations?user=nP1iwxMAAAAJ&hl=en"
+    role: postdoc
+    image: /img/people/jiayingli.jpg
+
+postdoc-long:
+    display_name: "PHAM Hong Long"
+    role: postdoc
+    image: /img/people/long.jpg
+
 postdoc-richard:
     display_name: "Richard SCHUMI"
     webpage: "https://scholar.google.at/citations?user=aUrS9j0AAAAJ&hl=en"
     role: postdoc
     image: /img/people/richard.jpg
+
+postdoc-yueling:
+    display_name: "ZHANG Yueling"
+    role: postdoc
+    image: /img/people/yueling.jpg
 
 phd-tai:
     display_name: "NGUYEN Duy Tai"
