@@ -1,78 +1,64 @@
 
-prof-a:
-    display_name: "Prof A"
+prof-sunjun:
+    display_name: "SUN Jun"
+    webpage: "http://sunjun.site/"
+    github: sunjunhqq
     role: faculty
+    image: /img/people/sunjun.jpg
+    bio: "Associate Professor"
 
-prof-b:
-    display_name: "Prof B"
+prof-cposkitt:
+    display_name: "Chris POSKITT"
+    webpage: "https://cposkitt.github.io/"
+    github: cposkitt
     role: faculty
+    image: /img/people/cposkitt.jpg
+    bio: "Assistant Professor (Education)"
 
-prof-c:
-    display_name: "Prof C"
-    role: faculty
+#scott:
+#    display_name: "Scott Summers"
+#    webpage: "http://en.wikipedia.org/wiki/Cyclops_(comics)"
+#    role: staff
+#    image: /img/people/scott.png
+#    bio: aka Cyclops
 
-profx:
-    display_name: "Professor X"
-    webpage: "http://en.wikipedia.org/wiki/Professor_X"
-    github: profx
-    role: faculty
-    image: /img/people/prof-x.png
-    bio: Professor
-
-scott:
-    display_name: "Scott Summers"
-    webpage: "http://en.wikipedia.org/wiki/Cyclops_(comics)"
-    role: staff
-    image: /img/people/scott.png
-    bio: aka Cyclops
-
-wolverine:
-    display_name: "Wolverine"
-    webpage: "http://en.wikipedia.org/wiki/Wolverine_%28comics%29"
-    github: wolverine
+postdoc-yuqi:
+    display_name: "CHEN Yuqi"
+    webpage: "https://scholar.google.com.sg/citations?user=51itJEEAAAAJ&hl=en"
+    github: yuqiChen94
     role: postdoc
+    image: /img/people/yuqi.jpg
 
-storm:
-    display_name: "Storm"
-    webpage: "http://en.wikipedia.org/wiki/Storm_%28Marvel_Comics%29"
-    role: grad
-    image: /img/people/storm.png
+postdoc-richard:
+    display_name: "Richard SCHUMI"
+    webpage: "https://scholar.google.at/citations?user=aUrS9j0AAAAJ&hl=en"
+    role: postdoc
+    image: /img/people/richard.jpg
 
-grad-a:
-    display_name: "Grad A"
+phd-tai:
+    display_name: "NGUYEN Duy Tai"
     role: grad
+    image: /img/people/tai.jpg
 
-grad-b:
-    display_name: "Graduate Student B With Long Name"
+phd-phuc:
+    display_name: "NGUYEN Hua Gia Phuc"
     role: grad
+    image: /img/people/phuc.jpg
 
-grad-c:
-    display_name: "Grad C"
+phd-sunbing:
+    display_name: "SUN Bing"
     role: grad
+    image: /img/people/sunyang.jpg
 
-grad-d:
-    display_name: "Grad D"
+phd-sunyang:
+    display_name: "SUN Yang"
     role: grad
+    image: /img/people/sunyang.jpg
 
-grad-e:
-    display_name: "Grad E"
+phd-mengdi:
+    display_name: "ZHANG Mengdi"
     role: grad
-
-grad-f:
-    display_name: "Grad F"
-    role: grad
-
-grad-g:
-    display_name: "Grad G"
-    role: grad
-
-grad-h:
-    display_name: "Grad H"
-    role: grad
-
-grad-i:
-    display_name: "Grad I"
-    role: grad
+    image: /img/people/mengdi.jpg
 
 alum-a:
     display_name: "Alum A"
@@ -132,30 +118,22 @@ collab-e:
     display_name: "Collaborator E"
     role: collab
 
-ugrad-a:
-    display_name: "Ugrad A"
+ugrad-dvh:
+    display_name: "Daniel Varghese Hanley"
     role: ugrad
 
-ugrad-b:
-    display_name: "Ugrad Student B With Long Name"
-    role: ugrad
+#ugrad-alum-a:
+#    display_name: "Past Ugrad A"
+#    role: ugrad-alum
 
-ugrad-c:
-    display_name: "Ugrad C"
-    role: ugrad
 
-ugrad-d:
-    display_name: "Ugrad D"
-    role: ugrad
 
-ugrad-e:
-    display_name: "Ugrad E"
-    role: ugrad
 
-ugrad-alum-a:
-    display_name: "Past Ugrad A"
-    role: ugrad-alum
 
-ugrad-alum-b:
-    display_name: "Past Ugrad Student B With Long Name"
-    role: ugrad-alum
+
+
+
+
+
+
+
