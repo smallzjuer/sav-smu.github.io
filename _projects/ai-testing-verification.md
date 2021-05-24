@@ -1,18 +1,15 @@
 ---
-title: Testing/Defending CPSs
+title: AI Testing & Verification
 
 description: |
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit blandit
-  varius. Pellentesque habitant morbi tristique senectus et netus et malesuada
-  fames ac turpis egestas.
+  Neural networks can be (arguably) viewed a different paradigm of programming, where logical reasoning is replaced with big data and optimization. Unlike traditional programs, however, neural networks are subject to bugs, e.g., adversarial samples and discriminatory instances. In this line of work, we aim to develop systematic theories, methods and tools to improve the quality of AI-systems.
 
 people:
   - prof-sunjun
-  - prof-cposkitt
-  - postdoc-yuqi
+  - phd-mengdi
 
 layout: project
-last-updated: 2015-05-05
+last-updated: 2021-05-24
 ---
 
 Proin massa augue, eleifend non ultricies eget, feugiat ut nisl. Fusce at

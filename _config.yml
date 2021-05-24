@@ -19,12 +19,12 @@ roles:
     name: Research Fellows
   - key: grad
     name: PhD Students
-  - key: ugrad
-    name: Undergraduate Students
-  - key: ugrad-alum
-    name: Past Undergraduate Students
-  - key: collab
-    name: Collaborators
+#  - key: ugrad
+#    name: Undergraduate Students
+#  - key: ugrad-alum
+#    name: Past Undergraduate Students
+#  - key: collab
+#    name: Collaborators
   - key: alum
     name: Alumni
 

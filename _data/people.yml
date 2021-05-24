@@ -79,10 +79,10 @@ phd-mengdi:
 alum-a:
     display_name: "Alum A"
     role: alum
-    bio: "Ph.D., 2013. Now at Microsoft Research."
+    bio: "Ph.D., 2013."
 
 alum-b:
-    display_name: "Alum B With Way Longer Name"
+    display_name: "Alum B"
     role: alum
 
 alum-c:
@@ -114,29 +114,13 @@ alum-i:
     display_name: "Alum I"
     role: alum
 
-collab-a:
-    display_name: "Collaborator A"
-    role: collab
+#collab-a:
+#    display_name: "Collaborator A"
+#    role: collab
 
-collab-b:
-    display_name: "Collaborator B With Long Name"
-    role: collab
-
-collab-c:
-    display_name: "Collaborator C"
-    role: collab
-
-collab-d:
-    display_name: "Collaborator D"
-    role: collab
-
-collab-e:
-    display_name: "Collaborator E"
-    role: collab
-
-ugrad-dvh:
-    display_name: "Daniel Varghese Hanley"
-    role: ugrad
+#ugrad-dvh:
+#    display_name: "Daniel Varghese Hanley"
+#    role: ugrad
 
 #ugrad-alum-a:
 #    display_name: "Past Ugrad A"
