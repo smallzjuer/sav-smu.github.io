@@ -94,6 +94,12 @@ alum-cristian:
     bio: "Research Fellow"
     webpage: "https://www.linkedin.com/in/cristian-gherghina-a020b53"
 
+alum-cyrille:
+    display_name: "Cyrille JEGOUREL"
+    role: alum
+    bio: "Research Fellow"
+    webpage: "https://istd.sutd.edu.sg/people/faculty/cyrille-jegourel"
+
 alum-jianye:
     display_name: "Jianye HAO"
     role: alum
@@ -182,6 +188,12 @@ alum-lyly:
     display_name: "Lyly TRAN"
     role: alum
     bio: "Research Assistant"
+
+alum-jingyi:
+    display_name: "WANG Jingyi"
+    role: alum
+    bio: "PhD Student"
+    webpage: "https://wang-jingyi.github.io/"
 
 alum-wy:
     display_name: "WU Yongzheng"
