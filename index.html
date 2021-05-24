@@ -66,14 +66,18 @@ role-tables:
         {% comment %}
         Sort the projects by date, putting those without dates last
         {% endcomment %}
-        {% assign projects_by_date = site.projects | sort: 'last-updated', 'first' %}
-        {% assign projects_by_date = projects_by_date | reverse %}
-        {% for p in projects_by_date %}
-            {% if p.status != "inactive" %}
-                {% include project-card.html project=p %}
+        {% assign projects_by_title = site.projects | sort: 'title', 'first' %}
+        {% for p in projects_by_title %}
+            {% if p.active %}
+                {% include project-card-2.html project=p %}
             {% endif %}
         {% endfor %}
     </div>
+	
+    <p>
+        <span class="fa fa-fw fa-history"></span>
+        <a href="{{ site.base }}/research.html#past">Older research projects&hellip;</a>
+    </p>
 </section>
 
 <div id="people">

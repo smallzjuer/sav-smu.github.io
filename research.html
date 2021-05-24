@@ -15,11 +15,13 @@ title: Research Projects
     {% endcomment %}
     {% assign projects_by_title = site.projects | sort: 'last-updated', 'first' %}
     {% for p in projects_by_title %}
-        {% include project-card.html project=p %}
+		{% if p.active %}
+        	{% include project-card.html project=p %}
+		{% endif %}
     {% endfor %}
 </div>
 
-<h3>Past Projects</h2>
+<h3><a name="past"></a>Past Projects</h2>
 	
 <p>
 	The following are some past research projects that we have completed.
@@ -31,6 +33,8 @@ title: Research Projects
     {% endcomment %}
     {% assign projects_by_title = site.projects | sort: 'last-updated', 'first' %}
     {% for p in projects_by_title %}
-        {% include project-card.html project=p %}
+		{% if p.active == false %}
+        	{% include project-card.html project=p %}
+		{% endif %}
     {% endfor %}
 </div>

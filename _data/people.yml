@@ -76,43 +76,131 @@ phd-mengdi:
     role: grad
     image: /img/people/mengdi.jpg
 
-alum-a:
-    display_name: "Alum A"
+alum-manman:
+    display_name: "CHEN Manman"
     role: alum
-    bio: "Ph.D., 2013."
+    bio: "Research Fellow"
 
-alum-b:
-    display_name: "Alum B"
+alum-xiaohong:
+    display_name: "CHEN Xiaohong"
     role: alum
+    bio: "Research Assistant"
+    webpage: "https://fsl.cs.illinois.edu/people/xiaohong-chen/"
 
-alum-c:
-    display_name: "Alum C"
+alum-cristian:
+    display_name: "Cristian GHERGHINA"
     role: alum
-    webpage: "https://www.google.com"
+    bio: "Research Fellow"
+    webpage: "https://www.linkedin.com/in/cristian-gherghina-a020b53"
 
-alum-d:
-    display_name: "Alum D"
+alum-jianye:
+    display_name: "Jianye HAO"
     role: alum
+    bio: "SUTD-MIT Research Fellow"
+    webpage: "https://www.linkedin.com/in/hao-jianye-7ba18b18"
 
-alum-e:
-    display_name: "Alum E"
+alum-pingfan:
+    display_name: "KONG Pingfan"
     role: alum
+    bio: "Research Assistant"
+    webpage: "https://wwwen.uni.lu/snt/people/pingfan_kong"
 
-alum-f:
-    display_name: "Alum F"
+alum-loc:
+    display_name: "LE Quang Loc"
     role: alum
+    bio: "Research Fellow"
+    webpage: "https://loc.bitbucket.io/"
 
-alum-g:
-    display_name: "Alum G"
+alum-lili:
+    display_name: "LI Li"
     role: alum
+    bio: "Research Fellow"
+    webpage: "https://sg.linkedin.com/in/li-li-a1a95129"
 
-alum-h:
-    display_name: "Alum H"
+alum-anthony:
+    display_name: "Anthony Widjaja LIN"
     role: alum
+    bio: "Research Fellow"
+    webpage: "https://anthonywlin.github.io/"
 
-alum-i:
-    display_name: "Alum I"
+alum-swl:
+    display_name: "Shang-Wei LIN"
     role: alum
+    bio: "Research Fellow"
+    webpage: "https://personal.ntu.edu.sg/shang-wei.lin/"
+
+alum-lg:
+    display_name: "LIU Guanjun"
+    role: alum
+    bio: "Research Fellow"
+    webpage: "https://sites.google.com/site/liugj1116/"
+
+alum-shuang:
+    display_name: "LIU Shuang"
+    role: alum
+    bio: "Research Fellow"
+    webpage: "https://tjusail.github.io/people/liushuang.html"
+
+alum-liuyang:
+    display_name: "LIU Yang"
+    role: alum
+    bio: "Research Fellow"
+    webpage: "https://personal.ntu.edu.sg/yangliu/"
+
+alum-hoang:
+    display_name: "Duong Thien Hoang NGUYEN"
+    role: alum
+    bio: "Research Assistant"
+    webpage: "https://www.linkedin.com/in/duong-thien-hoang-nguyen-00b41066"
+
+alum-npn:
+    display_name: "NGUYEN Phuoc Nguong"
+    role: alum
+    bio: "Research Assistant"
+    webpage: "https://sg.linkedin.com/in/nguongphuc"
+
+alum-ntk:
+    display_name: "NGUYEN Truong Khanh"
+    role: alum
+    bio: "Research Fellow"
+    webpage: "https://sg.linkedin.com/in/truongkhanh"
+
+alum-david:
+    display_name: "David SANÁN"
+    role: alum
+    bio: "Research Fellow"
+    webpage: "https://www3.ntu.edu.sg/home/sanan/"
+
+alum-tth:
+    display_name: "TAN Tian Huat"
+    role: alum
+    bio: "Research Fellow"
+    webpage: "https://www.linkedin.com/in/tian-huat-tan-0137a123"
+
+alum-lyly:
+    display_name: "Lyly TRAN"
+    role: alum
+    bio: "Research Assistant"
+
+alum-wy:
+    display_name: "WU Yongzheng"
+    role: alum
+    bio: "Research Fellow"
+    webpage: "https://sg.linkedin.com/in/yongzheng-wu-06476169"
+
+alum-shaojie:
+    display_name: "ZHANG Shaojie"
+    role: alum
+    bio: "Research Fellow"
+
+alum-mz:
+    display_name: "Manchun ZHENG"
+    role: alum
+    bio: "Research Fellow"
+    webpage: "https://www.linkedin.com/in/manchun-zheng-70b20059"
+
+
+
 
 #collab-a:
 #    display_name: "Collaborator A"
