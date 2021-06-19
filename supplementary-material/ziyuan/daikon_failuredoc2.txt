@@ -1,0 +1,1541 @@
+
+Executing target program: java -cp daikon.jar:bin/:. -ea -Xmx1000m -javaagent:daikon.jar=--daikon --dtrace-file=ApachePrimitivesTest0b.dtrace.gz org.apache.commons.collections.primitives.issues.ApachePrimitivesTest0b
+entered daikon.chicory.Runtime.setDtrace(./ApachePrimitivesTest0b.dtrace.gz, false)...
+
+Executing daikon: java -Xmx1000m -cp daikon.jar:bin/:. -ea daikon.Daikon  ./ApachePrimitivesTest0b.dtrace.gz
+Daikon version 5.2.22, released February 1, 2016; http://plse.cs.washington.edu/daikon.
+Reading declaration files                                                                                [8:43:28 PM]:                                                                                                                                                 Processing trace data; reading 1 dtrace file:
+[8:43:29 PM]: Finished reading ./ApachePrimitivesTest0b.dtrace.gz              
+                                                                                                                                                              ===========================================================================
+junit.framework.Assert:::OBJECT
+this has only one value
+===========================================================================
+junit.framework.Assert.Assert():::EXIT
+===========================================================================
+junit.framework.Assert.assertTrue(java.lang.String, boolean):::ENTER
+message has only one value
+message.toString == "Contract failed: var11.equals(var11)"
+condition == true
+===========================================================================
+junit.framework.Assert.assertTrue(java.lang.String, boolean):::EXIT
+message.toString == "Contract failed: var11.equals(var11)"
+message.toString == orig(message.toString)
+===========================================================================
+junit.framework.TestCase:::OBJECT
+this has only one value
+this.getClass().getName() == org.apache.commons.collections.primitives.issues.ApachePrimitivesTest0b.class
+this.fName == null
+===========================================================================
+junit.framework.TestCase.TestCase():::EXIT
+===========================================================================
+junit.framework.TestCase.assertTrue(java.lang.String, boolean):::ENTER
+message has only one value
+message.toString == "Contract failed: var11.equals(var11)"
+condition == true
+===========================================================================
+junit.framework.TestCase.assertTrue(java.lang.String, boolean):::EXIT
+message.toString == "Contract failed: var11.equals(var11)"
+message.toString == orig(message.toString)
+===========================================================================
+org.apache.commons.collections.primitives.AbstractCharCollection:::OBJECT
+this.getClass().getName() == org.apache.commons.collections.primitives.ArrayCharList.class
+===========================================================================
+org.apache.commons.collections.primitives.AbstractCharCollection.AbstractCharCollection():::EXIT
+===========================================================================
+org.apache.commons.collections.primitives.AbstractCharCollection.toArray():::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.AbstractCharCollection.toArray():::EXIT
+return[] elements == 52
+return[] one of { [], [52] }
+size(return[]) one of { 0, 1 }
+===========================================================================
+org.apache.commons.collections.primitives.AbstractDoubleCollection:::OBJECT
+this has only one value
+this.getClass().getName() == org.apache.commons.collections.primitives.ArrayDoubleList.class
+===========================================================================
+org.apache.commons.collections.primitives.AbstractDoubleCollection.AbstractDoubleCollection():::EXIT
+===========================================================================
+org.apache.commons.collections.primitives.AbstractShortCollection:::OBJECT
+this has only one value
+this.getClass().getName() == org.apache.commons.collections.primitives.ArrayShortList.class
+===========================================================================
+org.apache.commons.collections.primitives.AbstractShortCollection.AbstractShortCollection():::EXIT
+===========================================================================
+org.apache.commons.collections.primitives.ArrayCharList:::OBJECT
+this._data != null
+this._data[] elements one of { 0, 52 }
+this._data[] sorted by >=
+this._size one of { 0, 1 }
+size(this._data[]) one of { 0, 1, 8 }
+this._size <= size(this._data[])
+===========================================================================
+org.apache.commons.collections.primitives.ArrayCharList.ArrayCharList():::EXIT
+this._size == this._data[this._size]
+this._data[] == [0, 0, 0, 0, 0, 0, 0, 0]
+this._data[] elements == 0
+this._size == 0
+size(this._data[]) == 8
+this._data[] elements == this._size
+===========================================================================
+org.apache.commons.collections.primitives.ArrayCharList.ArrayCharList(int):::ENTER
+initialCapacity one of { 0, 1, 8 }
+===========================================================================
+org.apache.commons.collections.primitives.ArrayCharList.ArrayCharList(int):::EXIT
+orig(initialCapacity) == size(this._data[])
+this._data[] elements == 0
+this._data[] one of { [], [0], [0, 0, 0, 0, 0, 0, 0, 0] }
+this._size == 0
+this._data[] elements == this._size
+this._size <= orig(initialCapacity)
+===========================================================================
+org.apache.commons.collections.primitives.ArrayCharList.add(int, char):::ENTER
+this._size == index
+this._size == this._data[this._size]
+this._size == this._data[index]
+this._data[] elements == 0
+this._data[] one of { [0], [0, 0, 0, 0, 0, 0, 0, 0] }
+this._size == 0
+element == 52
+size(this._data[]) one of { 1, 8 }
+this._data[] elements == this._size
+===========================================================================
+org.apache.commons.collections.primitives.ArrayCharList.add(int, char):::EXIT
+this._data == orig(this._data)
+orig(index) == orig(this._data[post(this._size)-1])
+orig(index) == orig(this._data[post(index)])
+orig(index) == orig(this._data[this._size])
+orig(index) == orig(this._data[index])
+orig(element) == this._data[this._size-1]
+orig(element) == this._data[orig(this._size)]
+orig(element) == this._data[orig(index)]
+size(this._data[]) == orig(size(this._data[]))
+this._data[] one of { [52], [52, 0, 0, 0, 0, 0, 0, 0] }
+this._size == 1
+orig(index) == 0
+size(this._data[]) one of { 1, 8 }
+orig(this._data[]) elements == orig(index)
+===========================================================================
+org.apache.commons.collections.primitives.ArrayCharList.checkRange(int):::ENTER
+this._data[this._size-1] == this._data[index]
+this._data[] one of { [52], [52, 0, 0, 0, 0, 0, 0, 0] }
+this._size == 1
+index == 0
+size(this._data[]) one of { 1, 8 }
+this._data[this._size-1] == 52
+===========================================================================
+org.apache.commons.collections.primitives.ArrayCharList.checkRange(int):::EXIT
+this._data == orig(this._data)
+this._data[] == orig(this._data[])
+this._size == orig(this._size)
+this._data[this._size-1] == this._data[orig(index)]
+this._data[orig(this._size)-1] == this._data[orig(index)]
+this._data[orig(index)] == orig(this._data[post(this._size)-1])
+this._data[orig(index)] == orig(this._data[this._size-1])
+this._data[] one of { [52], [52, 0, 0, 0, 0, 0, 0, 0] }
+this._size == 1
+size(this._data[]) one of { 1, 8 }
+this._data[orig(index)] == 52
+===========================================================================
+org.apache.commons.collections.primitives.ArrayCharList.checkRangeIncludingEndpoint(int):::ENTER
+this._size == index
+this._size == this._data[this._size]
+this._size == this._data[index]
+this._data[] elements == 0
+this._data[] one of { [0], [0, 0, 0, 0, 0, 0, 0, 0] }
+this._size == 0
+size(this._data[]) one of { 1, 8 }
+this._data[] elements == this._size
+===========================================================================
+org.apache.commons.collections.primitives.ArrayCharList.checkRangeIncludingEndpoint(int):::EXIT
+this._data == orig(this._data)
+this._data[] == orig(this._data[])
+this._size == orig(this._size)
+this._size == orig(index)
+this._size == this._data[this._size]
+this._size == this._data[orig(this._size)]
+this._size == this._data[orig(index)]
+this._size == orig(this._data[post(this._size)])
+this._size == orig(this._data[post(index)])
+this._size == orig(this._data[this._size])
+this._size == orig(this._data[index])
+this._data[] elements == 0
+this._data[] one of { [0], [0, 0, 0, 0, 0, 0, 0, 0] }
+this._size == 0
+size(this._data[]) one of { 1, 8 }
+this._data[] elements == this._size
+===========================================================================
+org.apache.commons.collections.primitives.ArrayCharList.ensureCapacity(int):::ENTER
+this._size == this._data[this._size]
+this._size == this._data[mincap-1]
+this._data[] elements == 0
+this._data[] one of { [0], [0, 0, 0, 0, 0, 0, 0, 0] }
+this._size == 0
+mincap == 1
+size(this._data[]) one of { 1, 8 }
+this._data[] elements == this._size
+===========================================================================
+org.apache.commons.collections.primitives.ArrayCharList.ensureCapacity(int):::EXIT
+this._data == orig(this._data)
+this._data[] == orig(this._data[])
+this._size == orig(this._size)
+this._size == this._data[this._size]
+this._size == this._data[orig(this._size)]
+this._size == this._data[orig(mincap)-1]
+this._size == orig(this._data[post(this._size)])
+this._size == orig(this._data[post(mincap)-1])
+this._size == orig(this._data[this._size])
+this._size == orig(this._data[mincap-1])
+this._data[] elements == 0
+this._data[] one of { [0], [0, 0, 0, 0, 0, 0, 0, 0] }
+this._size == 0
+size(this._data[]) one of { 1, 8 }
+this._data[] elements == this._size
+===========================================================================
+org.apache.commons.collections.primitives.ArrayCharList.get(int):::ENTER
+this._data[this._size-1] == this._data[index]
+this._data[] one of { [52], [52, 0, 0, 0, 0, 0, 0, 0] }
+this._size == 1
+index == 0
+size(this._data[]) one of { 1, 8 }
+this._data[this._size-1] == 52
+===========================================================================
+org.apache.commons.collections.primitives.ArrayCharList.get(int):::EXIT
+this._data == orig(this._data)
+this._data[] == orig(this._data[])
+this._size == orig(this._size)
+return == this._data[this._size-1]
+return == this._data[orig(this._size)-1]
+return == this._data[orig(index)]
+return == orig(this._data[post(this._size)-1])
+return == orig(this._data[post(index)])
+return == orig(this._data[this._size-1])
+return == orig(this._data[index])
+this._data[] one of { [52], [52, 0, 0, 0, 0, 0, 0, 0] }
+this._size == 1
+return == 52
+size(this._data[]) one of { 1, 8 }
+===========================================================================
+org.apache.commons.collections.primitives.ArrayCharList.size():::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.ArrayCharList.size():::EXIT
+this._data == orig(this._data)
+this._data[] == orig(this._data[])
+this._size == return
+return == orig(this._size)
+return one of { 0, 1 }
+return <= size(this._data[])
+===========================================================================
+org.apache.commons.collections.primitives.ArrayDoubleList:::OBJECT
+this has only one value
+this._data has only one value
+this._data != null
+this._data[] elements one of { 0.0, 100.0 }
+this._data[] one of { [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], [100.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] }
+this._data[] sorted by >=
+this._size one of { 0, 1 }
+size(this._data[]) == 8
+this._size < size(this._data[])-1
+===========================================================================
+org.apache.commons.collections.primitives.ArrayDoubleList.ArrayDoubleList():::EXIT
+this._data[] == [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+this._data[] elements == 0.0
+this._size == 0
+===========================================================================
+org.apache.commons.collections.primitives.ArrayDoubleList.ArrayDoubleList(int):::ENTER
+initialCapacity == 8
+===========================================================================
+org.apache.commons.collections.primitives.ArrayDoubleList.ArrayDoubleList(int):::EXIT
+orig(initialCapacity) == size(this._data[])
+this._data[] == [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+this._data[] elements == 0.0
+this._size == 0
+===========================================================================
+org.apache.commons.collections.primitives.ArrayDoubleList.add(int, double):::ENTER
+this._size == index
+this._data[] == [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+this._data[] elements == 0.0
+this._size == 0
+element == 100.0
+===========================================================================
+org.apache.commons.collections.primitives.ArrayDoubleList.add(int, double):::EXIT
+this._data == orig(this._data)
+size(this._data[]) == orig(size(this._data[]))
+this._data[] == [100.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+this._size == 1
+orig(index) == 0
+orig(element) in this._data[]
+===========================================================================
+org.apache.commons.collections.primitives.ArrayDoubleList.checkRange(int):::ENTER
+this._data[] == [100.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+this._size == 1
+index == 0
+===========================================================================
+org.apache.commons.collections.primitives.ArrayDoubleList.checkRange(int):::EXIT
+this._data == orig(this._data)
+this._data[] == orig(this._data[])
+this._size == orig(this._size)
+this._data[] == [100.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+this._size == 1
+===========================================================================
+org.apache.commons.collections.primitives.ArrayDoubleList.checkRangeIncludingEndpoint(int):::ENTER
+this._size == index
+this._data[] == [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+this._data[] elements == 0.0
+this._size == 0
+===========================================================================
+org.apache.commons.collections.primitives.ArrayDoubleList.checkRangeIncludingEndpoint(int):::EXIT
+this._data == orig(this._data)
+this._data[] == orig(this._data[])
+this._size == orig(this._size)
+this._size == orig(index)
+this._data[] == [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+this._data[] elements == 0.0
+this._size == 0
+===========================================================================
+org.apache.commons.collections.primitives.ArrayDoubleList.ensureCapacity(int):::ENTER
+this._data[] == [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+this._data[] elements == 0.0
+this._size == 0
+mincap == 1
+===========================================================================
+org.apache.commons.collections.primitives.ArrayDoubleList.ensureCapacity(int):::EXIT
+this._data == orig(this._data)
+this._data[] == orig(this._data[])
+this._size == orig(this._size)
+this._data[] == [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+this._data[] elements == 0.0
+this._size == 0
+===========================================================================
+org.apache.commons.collections.primitives.ArrayDoubleList.get(int):::ENTER
+this._data[] == [100.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+this._size == 1
+index == 0
+===========================================================================
+org.apache.commons.collections.primitives.ArrayDoubleList.get(int):::EXIT
+this._data == orig(this._data)
+this._data[] == orig(this._data[])
+this._size == orig(this._size)
+this._data[] == [100.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+this._size == 1
+return == 100.0
+return in this._data[]
+===========================================================================
+org.apache.commons.collections.primitives.ArrayDoubleList.size():::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.ArrayDoubleList.size():::EXIT
+this._data == orig(this._data)
+this._data[] == orig(this._data[])
+this._size == return
+return == orig(this._size)
+return one of { 0, 1 }
+return < size(this._data[])-1
+===========================================================================
+org.apache.commons.collections.primitives.ArrayShortList:::OBJECT
+this._size == size(this._data[])
+this has only one value
+this._data has only one value
+this._data[] == []
+===========================================================================
+org.apache.commons.collections.primitives.ArrayShortList.ArrayShortList(int):::ENTER
+initialCapacity == 0
+===========================================================================
+org.apache.commons.collections.primitives.ArrayShortList.ArrayShortList(int):::EXIT
+this._size == orig(initialCapacity)
+===========================================================================
+org.apache.commons.collections.primitives.ArrayShortList.size():::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.ArrayShortList.size():::EXIT
+this._data == orig(this._data)
+this._data[] == orig(this._data[])
+this._size == return
+return == orig(this._size)
+return == size(this._data[])
+return == orig(size(this._data[]))
+===========================================================================
+org.apache.commons.collections.primitives.CharCollections:::CLASS
+org.apache.commons.collections.primitives.CharCollections.EMPTY_CHAR_LIST has only one value
+org.apache.commons.collections.primitives.CharCollections.EMPTY_CHAR_LIST.getClass().getName() == org.apache.commons.collections.primitives.decorators.UnmodifiableCharList.class
+org.apache.commons.collections.primitives.CharCollections.EMPTY_CHAR_ITERATOR has only one value
+org.apache.commons.collections.primitives.CharCollections.EMPTY_CHAR_ITERATOR.getClass().getName() == org.apache.commons.collections.primitives.decorators.UnmodifiableCharIterator.class
+org.apache.commons.collections.primitives.CharCollections.EMPTY_CHAR_LIST_ITERATOR has only one value
+org.apache.commons.collections.primitives.CharCollections.EMPTY_CHAR_LIST_ITERATOR.getClass().getName() == org.apache.commons.collections.primitives.decorators.UnmodifiableCharListIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.CharCollections.singletonCharList(char):::ENTER
+value == 52
+===========================================================================
+org.apache.commons.collections.primitives.CharCollections.singletonCharList(char):::EXIT
+org.apache.commons.collections.primitives.CharCollections.EMPTY_CHAR_LIST == orig(org.apache.commons.collections.primitives.CharCollections.EMPTY_CHAR_LIST)
+org.apache.commons.collections.primitives.CharCollections.EMPTY_CHAR_ITERATOR == orig(org.apache.commons.collections.primitives.CharCollections.EMPTY_CHAR_ITERATOR)
+org.apache.commons.collections.primitives.CharCollections.EMPTY_CHAR_LIST_ITERATOR == orig(org.apache.commons.collections.primitives.CharCollections.EMPTY_CHAR_LIST_ITERATOR)
+org.apache.commons.collections.primitives.CharCollections.EMPTY_CHAR_LIST.getClass().getName() == return.getClass().getName()
+org.apache.commons.collections.primitives.CharCollections.EMPTY_CHAR_LIST.getClass().getName() == orig(org.apache.commons.collections.primitives.CharCollections.EMPTY_CHAR_LIST.getClass().getName())
+org.apache.commons.collections.primitives.CharCollections.EMPTY_CHAR_ITERATOR.getClass().getName() == orig(org.apache.commons.collections.primitives.CharCollections.EMPTY_CHAR_ITERATOR.getClass().getName())
+org.apache.commons.collections.primitives.CharCollections.EMPTY_CHAR_LIST_ITERATOR.getClass().getName() == orig(org.apache.commons.collections.primitives.CharCollections.EMPTY_CHAR_LIST_ITERATOR.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.CharCollections.unmodifiableCharIterator(org.apache.commons.collections.primitives.CharIterator):::ENTER
+iter has only one value
+iter.getClass().getName() == org.apache.commons.collections.primitives.decorators.UnmodifiableCharIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.CharCollections.unmodifiableCharIterator(org.apache.commons.collections.primitives.CharIterator):::EXIT
+return has only one value
+return.getClass().getName() == org.apache.commons.collections.primitives.decorators.UnmodifiableCharIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.CharCollections.unmodifiableCharList(org.apache.commons.collections.primitives.CharList):::ENTER
+list has only one value
+list.getClass().getName() == org.apache.commons.collections.primitives.ArrayCharList.class
+===========================================================================
+org.apache.commons.collections.primitives.CharCollections.unmodifiableCharList(org.apache.commons.collections.primitives.CharList):::EXIT
+return has only one value
+return.getClass().getName() == org.apache.commons.collections.primitives.decorators.UnmodifiableCharList.class
+===========================================================================
+org.apache.commons.collections.primitives.CharCollections.unmodifiableCharListIterator(org.apache.commons.collections.primitives.CharListIterator):::ENTER
+iter has only one value
+iter.getClass().getName() == org.apache.commons.collections.primitives.decorators.UnmodifiableCharListIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.CharCollections.unmodifiableCharListIterator(org.apache.commons.collections.primitives.CharListIterator):::EXIT
+return has only one value
+return.getClass().getName() == org.apache.commons.collections.primitives.decorators.UnmodifiableCharListIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList$ComodChecker:::OBJECT
+this._source != null
+this._source.getClass().getName() == org.apache.commons.collections.primitives.ArrayCharList.class
+this._source._modCount one of { 0, 2 }
+this._expectedModCount one of { -1, 0, 2 }
+this._source._modCount >= this._expectedModCount
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList$ComodChecker.RandomAccessCharList$ComodChecker(org.apache.commons.collections.primitives.RandomAccessCharList):::ENTER
+org.apache.commons.collections.primitives.RandomAccessCharList.this.getClass().getName() == org.apache.commons.collections.primitives.ArrayCharList.class
+org.apache.commons.collections.primitives.RandomAccessCharList.this._modCount one of { 0, 2 }
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList$ComodChecker.RandomAccessCharList$ComodChecker(org.apache.commons.collections.primitives.RandomAccessCharList):::EXIT
+this._source == orig(org.apache.commons.collections.primitives.RandomAccessCharList.this)
+this._source._modCount == this._expectedModCount
+this._expectedModCount == org.apache.commons.collections.primitives.RandomAccessCharList.this._modCount
+this._expectedModCount == orig(org.apache.commons.collections.primitives.RandomAccessCharList.this._modCount)
+this._expectedModCount one of { 0, 2 }
+this._source.getClass().getName() == orig(org.apache.commons.collections.primitives.RandomAccessCharList.this.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList$ComodChecker.assertNotComodified():::ENTER
+this._source._modCount == this._expectedModCount
+this._expectedModCount one of { 0, 2 }
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList$ComodChecker.assertNotComodified():::EXIT
+this._source == orig(this._source)
+this._source._modCount == this._expectedModCount
+this._expectedModCount == orig(this._source._modCount)
+this._expectedModCount == orig(this._expectedModCount)
+this._expectedModCount one of { 0, 2 }
+this._source.getClass().getName() == orig(this._source.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList$ComodChecker.getList():::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList$ComodChecker.getList():::EXIT
+this._source == return
+this._source._modCount == return._modCount
+this._expectedModCount == orig(this._expectedModCount)
+return == orig(this._source)
+return._modCount == orig(this._source._modCount)
+return != null
+return.getClass().getName() == org.apache.commons.collections.primitives.ArrayCharList.class
+return._modCount one of { 0, 2 }
+this._source.getClass().getName() == return.getClass().getName()
+this._expectedModCount <= return._modCount
+return.getClass().getName() == orig(this._source.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList$ComodChecker.resyncModCount():::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList$ComodChecker.resyncModCount():::EXIT
+this._source == orig(this._source)
+this._source._modCount == this._expectedModCount
+this._expectedModCount == orig(this._source._modCount)
+this._expectedModCount one of { 0, 2 }
+this._source.getClass().getName() == orig(this._source.getClass().getName())
+this._expectedModCount >= orig(this._expectedModCount)
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList$RandomAccessCharListIterator:::OBJECT
+this._nextIndex one of { 0, 1 }
+this._lastReturnedIndex one of { -1, 0 }
+this._nextIndex > this._lastReturnedIndex
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList$RandomAccessCharListIterator.RandomAccessCharList$RandomAccessCharListIterator(org.apache.commons.collections.primitives.RandomAccessCharList, int):::ENTER
+org.apache.commons.collections.primitives.RandomAccessCharList.this.getClass().getName() == org.apache.commons.collections.primitives.ArrayCharList.class
+org.apache.commons.collections.primitives.RandomAccessCharList.this._modCount one of { 0, 2 }
+index == 0
+org.apache.commons.collections.primitives.RandomAccessCharList.this._modCount >= index
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList$RandomAccessCharListIterator.RandomAccessCharList$RandomAccessCharListIterator(org.apache.commons.collections.primitives.RandomAccessCharList, int):::EXIT
+this._nextIndex == orig(index)
+org.apache.commons.collections.primitives.RandomAccessCharList.this._modCount == orig(org.apache.commons.collections.primitives.RandomAccessCharList.this._modCount)
+this._nextIndex == 0
+this._lastReturnedIndex == -1
+org.apache.commons.collections.primitives.RandomAccessCharList.this._modCount one of { 0, 2 }
+this._nextIndex <= org.apache.commons.collections.primitives.RandomAccessCharList.this._modCount
+this._lastReturnedIndex < org.apache.commons.collections.primitives.RandomAccessCharList.this._modCount
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList$RandomAccessCharListIterator.hasNext():::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList$RandomAccessCharListIterator.hasNext():::EXIT268
+this._nextIndex == 0
+this._lastReturnedIndex == -1
+return == true
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList$RandomAccessCharListIterator.hasNext():::EXIT268;condition="return == true"
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList$RandomAccessCharListIterator.hasNext():::EXIT269
+return == false
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList$RandomAccessCharListIterator.hasNext():::EXIT269;condition="not(return == true)"
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList$RandomAccessCharListIterator.hasNext():::EXIT
+this._nextIndex == orig(this._nextIndex)
+this._lastReturnedIndex == orig(this._lastReturnedIndex)
+(return == false)  ==>  (this._lastReturnedIndex one of { -1, 0 })
+(return == false)  ==>  (this._nextIndex one of { 0, 1 })
+(return == true)  ==>  (this._lastReturnedIndex == -1)
+(return == true)  ==>  (this._nextIndex == 0)
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList$RandomAccessCharListIterator.hasNext():::EXIT;condition="return == true"
+this._nextIndex == 0
+this._lastReturnedIndex == -1
+return == true
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList$RandomAccessCharListIterator.hasNext():::EXIT;condition="not(return == true)"
+return == false
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList$RandomAccessCharListIterator.next():::ENTER
+this._nextIndex == 0
+this._lastReturnedIndex == -1
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList$RandomAccessCharListIterator.next():::EXIT
+this._lastReturnedIndex == orig(this._nextIndex)
+this._nextIndex == 1
+this._lastReturnedIndex == 0
+return == 52
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList:::OBJECT
+this.getClass().getName() == org.apache.commons.collections.primitives.ArrayCharList.class
+this._modCount one of { 0, 1, 2 }
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList.RandomAccessCharList():::EXIT
+this._modCount == 0
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList.add(char):::ENTER
+this._modCount == 0
+element == 52
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList.add(char):::EXIT
+this._modCount == 2
+return == true
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList.add(char):::EXIT;condition="return == true"
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList.addAll(int, org.apache.commons.collections.primitives.CharCollection):::ENTER
+this._modCount one of { 0, 2 }
+index one of { 0, 100 }
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList.addAll(int, org.apache.commons.collections.primitives.CharCollection):::EXIT
+(index == 1)  <==>  (orig(collection.getClass().getName()) == org.apache.commons.collections.primitives.decorators.UnmodifiableCharList.class)
+(index == 1)  <==>  (orig(index) == 0)
+(index == 1)  <==>  (orig(this._modCount) == orig(index))
+(index == 1)  <==>  (return == true)
+(index == 1)  ==>  (orig(collection) has only one value)
+(index == 1)  ==>  (orig(this) has only one value)
+(index == 1)  ==>  (orig(this._modCount) == 0)
+(index == 1)  ==>  (this._modCount == 2)
+(index == 100)  <==>  (index == orig(index))
+(index == 100)  <==>  (orig(collection.getClass().getName()) == org.apache.commons.collections.primitives.ArrayCharList.class)
+(index == 100)  <==>  (orig(index) == 100)
+(index == 100)  <==>  (orig(this.getClass().getName()) == orig(collection.getClass().getName()))
+(index == 100)  <==>  (return == false)
+(index == 100)  <==>  (this._modCount == orig(this._modCount))
+(index == 100)  ==>  (orig(this._modCount) one of { 0, 2 })
+(index == 100)  ==>  (this._modCount one of { 0, 2 })
+this._modCount one of { 0, 2 }
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList.addAll(int, org.apache.commons.collections.primitives.CharCollection):::EXIT;condition="return == true"
+orig(this._modCount) == orig(index)
+this._modCount == 2
+return == true
+orig(this) has only one value
+orig(index) == 0
+orig(collection) has only one value
+orig(collection.getClass().getName()) == org.apache.commons.collections.primitives.decorators.UnmodifiableCharList.class
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList.addAll(int, org.apache.commons.collections.primitives.CharCollection):::EXIT;condition="not(return == true)"
+this._modCount == orig(this._modCount)
+return == false
+orig(index) == 100
+orig(this.getClass().getName()) == orig(collection.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList.getModCount():::ENTER
+this._modCount one of { 0, 2 }
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList.getModCount():::EXIT
+this._modCount == return
+return == orig(this._modCount)
+return one of { 0, 2 }
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList.incrModCount():::ENTER
+this._modCount one of { 0, 1 }
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList.incrModCount():::EXIT
+this._modCount one of { 1, 2 }
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList.iterator():::ENTER
+this._modCount one of { 0, 2 }
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList.iterator():::EXIT
+this._modCount == orig(this._modCount)
+this._modCount one of { 0, 2 }
+return.getClass().getName() == org.apache.commons.collections.primitives.RandomAccessCharList$RandomAccessCharListIterator.class
+return.getClass().getName() != orig(this.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList.listIterator():::ENTER
+this._modCount one of { 0, 2 }
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList.listIterator():::EXIT
+this._modCount == orig(this._modCount)
+this._modCount one of { 0, 2 }
+return.getClass().getName() == org.apache.commons.collections.primitives.RandomAccessCharList$RandomAccessCharListIterator.class
+return.getClass().getName() != orig(this.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList.listIterator(int):::ENTER
+this._modCount one of { 0, 2 }
+index == 0
+this._modCount >= index
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList.listIterator(int):::EXIT
+this._modCount == orig(this._modCount)
+this._modCount one of { 0, 2 }
+return.getClass().getName() == org.apache.commons.collections.primitives.RandomAccessCharList$RandomAccessCharListIterator.class
+this._modCount >= orig(index)
+return.getClass().getName() != orig(this.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList.toString():::ENTER
+this._modCount one of { 0, 2 }
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessCharList.toString():::EXIT
+this._modCount == orig(this._modCount)
+this._modCount one of { 0, 2 }
+return.toString one of { "", "4" }
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessDoubleList$ComodChecker:::OBJECT
+this._source has only one value
+this._source != null
+this._source.getClass().getName() == org.apache.commons.collections.primitives.ArrayDoubleList.class
+this._source._modCount == 2
+this._expectedModCount one of { -1, 2 }
+this._expectedModCount != 0
+this._source._modCount >= this._expectedModCount
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessDoubleList$ComodChecker.RandomAccessDoubleList$ComodChecker(org.apache.commons.collections.primitives.RandomAccessDoubleList):::ENTER
+org.apache.commons.collections.primitives.RandomAccessDoubleList.this has only one value
+org.apache.commons.collections.primitives.RandomAccessDoubleList.this.getClass().getName() == org.apache.commons.collections.primitives.ArrayDoubleList.class
+org.apache.commons.collections.primitives.RandomAccessDoubleList.this._modCount == 2
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessDoubleList$ComodChecker.RandomAccessDoubleList$ComodChecker(org.apache.commons.collections.primitives.RandomAccessDoubleList):::EXIT
+this._source == orig(org.apache.commons.collections.primitives.RandomAccessDoubleList.this)
+this._source._modCount == this._expectedModCount
+this._expectedModCount == org.apache.commons.collections.primitives.RandomAccessDoubleList.this._modCount
+this._expectedModCount == orig(org.apache.commons.collections.primitives.RandomAccessDoubleList.this._modCount)
+this._expectedModCount == 2
+this._source.getClass().getName() == orig(org.apache.commons.collections.primitives.RandomAccessDoubleList.this.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessDoubleList$ComodChecker.assertNotComodified():::ENTER
+this._source._modCount == this._expectedModCount
+this._expectedModCount == 2
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessDoubleList$ComodChecker.assertNotComodified():::EXIT
+this._source == orig(this._source)
+this._source._modCount == this._expectedModCount
+this._expectedModCount == orig(this._source._modCount)
+this._expectedModCount == orig(this._expectedModCount)
+this._expectedModCount == 2
+this._source.getClass().getName() == orig(this._source.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessDoubleList$ComodChecker.getList():::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessDoubleList$ComodChecker.getList():::EXIT
+this._source == return
+this._source._modCount == return._modCount
+this._expectedModCount == orig(this._expectedModCount)
+return == orig(this._source)
+return._modCount == orig(this._source._modCount)
+return has only one value
+return != null
+return.getClass().getName() == org.apache.commons.collections.primitives.ArrayDoubleList.class
+return._modCount == 2
+this._source.getClass().getName() == return.getClass().getName()
+this._expectedModCount <= return._modCount
+return.getClass().getName() == orig(this._source.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessDoubleList$ComodChecker.resyncModCount():::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessDoubleList$ComodChecker.resyncModCount():::EXIT
+this._source == orig(this._source)
+this._source._modCount == this._expectedModCount
+this._expectedModCount == orig(this._source._modCount)
+this._expectedModCount == 2
+this._source.getClass().getName() == orig(this._source.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessDoubleList$RandomAccessDoubleListIterator:::OBJECT
+this._nextIndex one of { 0, 1 }
+this._lastReturnedIndex one of { -1, 0 }
+this._nextIndex > this._lastReturnedIndex
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessDoubleList$RandomAccessDoubleListIterator.RandomAccessDoubleList$RandomAccessDoubleListIterator(org.apache.commons.collections.primitives.RandomAccessDoubleList, int):::ENTER
+org.apache.commons.collections.primitives.RandomAccessDoubleList.this has only one value
+org.apache.commons.collections.primitives.RandomAccessDoubleList.this.getClass().getName() == org.apache.commons.collections.primitives.ArrayDoubleList.class
+org.apache.commons.collections.primitives.RandomAccessDoubleList.this._modCount == 2
+index == 0
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessDoubleList$RandomAccessDoubleListIterator.RandomAccessDoubleList$RandomAccessDoubleListIterator(org.apache.commons.collections.primitives.RandomAccessDoubleList, int):::EXIT
+this._nextIndex == orig(index)
+org.apache.commons.collections.primitives.RandomAccessDoubleList.this._modCount == orig(org.apache.commons.collections.primitives.RandomAccessDoubleList.this._modCount)
+this._nextIndex == 0
+this._lastReturnedIndex == -1
+org.apache.commons.collections.primitives.RandomAccessDoubleList.this._modCount == 2
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessDoubleList$RandomAccessDoubleListIterator.hasNext():::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessDoubleList$RandomAccessDoubleListIterator.hasNext():::EXIT277
+this._nextIndex == 0
+this._lastReturnedIndex == -1
+return == true
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessDoubleList$RandomAccessDoubleListIterator.hasNext():::EXIT277;condition="return == true"
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessDoubleList$RandomAccessDoubleListIterator.hasNext():::EXIT278
+this._nextIndex == 1
+this._lastReturnedIndex == 0
+return == false
+orig(this) has only one value
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessDoubleList$RandomAccessDoubleListIterator.hasNext():::EXIT278;condition="not(return == true)"
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessDoubleList$RandomAccessDoubleListIterator.hasNext():::EXIT
+this._nextIndex == orig(this._nextIndex)
+this._lastReturnedIndex == orig(this._lastReturnedIndex)
+(this._nextIndex == 0)  <==>  (return == true)
+(this._nextIndex == 0)  <==>  (this._lastReturnedIndex == -1)
+(this._nextIndex == 1)  <==>  (return == false)
+(this._nextIndex == 1)  <==>  (this._lastReturnedIndex == 0)
+(this._nextIndex == 1)  ==>  (orig(this) has only one value)
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessDoubleList$RandomAccessDoubleListIterator.hasNext():::EXIT;condition="return == true"
+this._nextIndex == 0
+this._lastReturnedIndex == -1
+return == true
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessDoubleList$RandomAccessDoubleListIterator.hasNext():::EXIT;condition="not(return == true)"
+this._nextIndex == 1
+this._lastReturnedIndex == 0
+return == false
+orig(this) has only one value
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessDoubleList$RandomAccessDoubleListIterator.next():::ENTER
+this._nextIndex == 0
+this._lastReturnedIndex == -1
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessDoubleList$RandomAccessDoubleListIterator.next():::EXIT
+this._lastReturnedIndex == orig(this._nextIndex)
+this._nextIndex == 1
+this._lastReturnedIndex == 0
+return == 100.0
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessDoubleList:::OBJECT
+this has only one value
+this.getClass().getName() == org.apache.commons.collections.primitives.ArrayDoubleList.class
+this._modCount one of { 0, 1, 2 }
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessDoubleList.RandomAccessDoubleList():::EXIT
+this._modCount == 0
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessDoubleList.add(double):::ENTER
+this._modCount == 0
+element == 100.0
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessDoubleList.add(double):::EXIT
+this._modCount == 2
+return == true
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessDoubleList.add(double):::EXIT;condition="return == true"
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessDoubleList.getModCount():::ENTER
+this._modCount == 2
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessDoubleList.getModCount():::EXIT
+this._modCount == return
+return == orig(this._modCount)
+return == 2
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessDoubleList.incrModCount():::ENTER
+this._modCount one of { 0, 1 }
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessDoubleList.incrModCount():::EXIT
+this._modCount one of { 1, 2 }
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessDoubleList.iterator():::ENTER
+this._modCount == 2
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessDoubleList.iterator():::EXIT
+this._modCount == orig(this._modCount)
+this._modCount == 2
+return.getClass().getName() == org.apache.commons.collections.primitives.RandomAccessDoubleList$RandomAccessDoubleListIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessDoubleList.listIterator():::ENTER
+this._modCount == 2
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessDoubleList.listIterator():::EXIT
+this._modCount == orig(this._modCount)
+this._modCount == 2
+return.getClass().getName() == org.apache.commons.collections.primitives.RandomAccessDoubleList$RandomAccessDoubleListIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessDoubleList.listIterator(int):::ENTER
+this._modCount == 2
+index == 0
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessDoubleList.listIterator(int):::EXIT
+this._modCount == orig(this._modCount)
+this._modCount == 2
+return.getClass().getName() == org.apache.commons.collections.primitives.RandomAccessDoubleList$RandomAccessDoubleListIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessShortList$ComodChecker:::OBJECT
+this._source has only one value
+this._source != null
+this._source.getClass().getName() == org.apache.commons.collections.primitives.ArrayShortList.class
+this._source._modCount == 0
+this._expectedModCount one of { -1, 0 }
+this._source._modCount >= this._expectedModCount
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessShortList$ComodChecker.RandomAccessShortList$ComodChecker(org.apache.commons.collections.primitives.RandomAccessShortList):::ENTER
+org.apache.commons.collections.primitives.RandomAccessShortList.this has only one value
+org.apache.commons.collections.primitives.RandomAccessShortList.this.getClass().getName() == org.apache.commons.collections.primitives.ArrayShortList.class
+org.apache.commons.collections.primitives.RandomAccessShortList.this._modCount == 0
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessShortList$ComodChecker.RandomAccessShortList$ComodChecker(org.apache.commons.collections.primitives.RandomAccessShortList):::EXIT
+this._source == orig(org.apache.commons.collections.primitives.RandomAccessShortList.this)
+this._source._modCount == this._expectedModCount
+this._expectedModCount == org.apache.commons.collections.primitives.RandomAccessShortList.this._modCount
+this._expectedModCount == orig(org.apache.commons.collections.primitives.RandomAccessShortList.this._modCount)
+this._expectedModCount == 0
+this._source.getClass().getName() == orig(org.apache.commons.collections.primitives.RandomAccessShortList.this.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessShortList$ComodChecker.getList():::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessShortList$ComodChecker.getList():::EXIT
+this._source == return
+this._source._modCount == return._modCount
+this._expectedModCount == orig(this._expectedModCount)
+return == orig(this._source)
+return._modCount == orig(this._source._modCount)
+return has only one value
+return.getClass().getName() == org.apache.commons.collections.primitives.ArrayShortList.class
+return._modCount == 0
+this._source.getClass().getName() == return.getClass().getName()
+return.getClass().getName() == orig(this._source.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessShortList$ComodChecker.resyncModCount():::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessShortList$ComodChecker.resyncModCount():::EXIT
+this._source == orig(this._source)
+this._source._modCount == this._expectedModCount
+this._expectedModCount == orig(this._source._modCount)
+this._expectedModCount == 0
+this._source.getClass().getName() == orig(this._source.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessShortList$RandomAccessShortListIterator:::OBJECT
+this._nextIndex == 0
+this._lastReturnedIndex == -1
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessShortList$RandomAccessShortListIterator.RandomAccessShortList$RandomAccessShortListIterator(org.apache.commons.collections.primitives.RandomAccessShortList, int):::ENTER
+org.apache.commons.collections.primitives.RandomAccessShortList.this._modCount == index
+org.apache.commons.collections.primitives.RandomAccessShortList.this has only one value
+org.apache.commons.collections.primitives.RandomAccessShortList.this.getClass().getName() == org.apache.commons.collections.primitives.ArrayShortList.class
+index == 0
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessShortList$RandomAccessShortListIterator.RandomAccessShortList$RandomAccessShortListIterator(org.apache.commons.collections.primitives.RandomAccessShortList, int):::EXIT
+this._nextIndex == org.apache.commons.collections.primitives.RandomAccessShortList.this._modCount
+this._nextIndex == orig(org.apache.commons.collections.primitives.RandomAccessShortList.this._modCount)
+this._nextIndex == orig(index)
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessShortList:::OBJECT
+this has only one value
+this.getClass().getName() == org.apache.commons.collections.primitives.ArrayShortList.class
+this._modCount == 0
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessShortList.RandomAccessShortList():::EXIT
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessShortList.getModCount():::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessShortList.getModCount():::EXIT
+this._modCount == return
+return == orig(this._modCount)
+return == 0
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessShortList.iterator():::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessShortList.iterator():::EXIT
+this._modCount == orig(this._modCount)
+return has only one value
+return.getClass().getName() == org.apache.commons.collections.primitives.RandomAccessShortList$RandomAccessShortListIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessShortList.listIterator():::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessShortList.listIterator():::EXIT
+this._modCount == orig(this._modCount)
+return.getClass().getName() == org.apache.commons.collections.primitives.RandomAccessShortList$RandomAccessShortListIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessShortList.listIterator(int):::ENTER
+this._modCount == index
+===========================================================================
+org.apache.commons.collections.primitives.RandomAccessShortList.listIterator(int):::EXIT
+this._modCount == orig(this._modCount)
+this._modCount == orig(index)
+return.getClass().getName() == org.apache.commons.collections.primitives.RandomAccessShortList$RandomAccessShortListIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.ShortCollections:::CLASS
+org.apache.commons.collections.primitives.ShortCollections.EMPTY_SHORT_LIST has only one value
+org.apache.commons.collections.primitives.ShortCollections.EMPTY_SHORT_LIST.getClass().getName() == org.apache.commons.collections.primitives.decorators.UnmodifiableShortList.class
+org.apache.commons.collections.primitives.ShortCollections.EMPTY_SHORT_ITERATOR has only one value
+org.apache.commons.collections.primitives.ShortCollections.EMPTY_SHORT_ITERATOR.getClass().getName() == org.apache.commons.collections.primitives.decorators.UnmodifiableShortIterator.class
+org.apache.commons.collections.primitives.ShortCollections.EMPTY_SHORT_LIST_ITERATOR has only one value
+org.apache.commons.collections.primitives.ShortCollections.EMPTY_SHORT_LIST_ITERATOR.getClass().getName() == org.apache.commons.collections.primitives.decorators.UnmodifiableShortListIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.ShortCollections.unmodifiableShortIterator(org.apache.commons.collections.primitives.ShortIterator):::ENTER
+iter has only one value
+iter.getClass().getName() == org.apache.commons.collections.primitives.decorators.UnmodifiableShortIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.ShortCollections.unmodifiableShortIterator(org.apache.commons.collections.primitives.ShortIterator):::EXIT
+return has only one value
+return.getClass().getName() == org.apache.commons.collections.primitives.decorators.UnmodifiableShortIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.ShortCollections.unmodifiableShortList(org.apache.commons.collections.primitives.ShortList):::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.ShortCollections.unmodifiableShortList(org.apache.commons.collections.primitives.ShortList):::EXIT
+org.apache.commons.collections.primitives.ShortCollections.EMPTY_SHORT_LIST == orig(org.apache.commons.collections.primitives.ShortCollections.EMPTY_SHORT_LIST)
+org.apache.commons.collections.primitives.ShortCollections.EMPTY_SHORT_ITERATOR == orig(org.apache.commons.collections.primitives.ShortCollections.EMPTY_SHORT_ITERATOR)
+org.apache.commons.collections.primitives.ShortCollections.EMPTY_SHORT_LIST_ITERATOR == orig(org.apache.commons.collections.primitives.ShortCollections.EMPTY_SHORT_LIST_ITERATOR)
+return.getClass().getName() == org.apache.commons.collections.primitives.decorators.UnmodifiableShortList.class
+org.apache.commons.collections.primitives.ShortCollections.EMPTY_SHORT_LIST.getClass().getName() == return.getClass().getName()
+org.apache.commons.collections.primitives.ShortCollections.EMPTY_SHORT_LIST.getClass().getName() == orig(org.apache.commons.collections.primitives.ShortCollections.EMPTY_SHORT_LIST.getClass().getName())
+org.apache.commons.collections.primitives.ShortCollections.EMPTY_SHORT_ITERATOR.getClass().getName() == orig(org.apache.commons.collections.primitives.ShortCollections.EMPTY_SHORT_ITERATOR.getClass().getName())
+org.apache.commons.collections.primitives.ShortCollections.EMPTY_SHORT_LIST_ITERATOR.getClass().getName() == orig(org.apache.commons.collections.primitives.ShortCollections.EMPTY_SHORT_LIST_ITERATOR.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.ShortCollections.unmodifiableShortListIterator(org.apache.commons.collections.primitives.ShortListIterator):::ENTER
+iter has only one value
+iter.getClass().getName() == org.apache.commons.collections.primitives.decorators.UnmodifiableShortListIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.ShortCollections.unmodifiableShortListIterator(org.apache.commons.collections.primitives.ShortListIterator):::EXIT
+return has only one value
+return.getClass().getName() == org.apache.commons.collections.primitives.decorators.UnmodifiableShortListIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.adapters.AbstractCharCollectionCollection:::OBJECT
+this has only one value
+this.getClass().getName() == org.apache.commons.collections.primitives.adapters.CharListList.class
+===========================================================================
+org.apache.commons.collections.primitives.adapters.AbstractCharCollectionCollection.AbstractCharCollectionCollection():::EXIT
+===========================================================================
+org.apache.commons.collections.primitives.adapters.AbstractCharCollectionCollection.iterator():::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.adapters.AbstractCharCollectionCollection.iterator():::EXIT
+return.getClass().getName() == org.apache.commons.collections.primitives.adapters.CharIteratorIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.adapters.AbstractCharCollectionCollection.size():::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.adapters.AbstractCharCollectionCollection.size():::EXIT
+return == 0
+===========================================================================
+org.apache.commons.collections.primitives.adapters.AbstractCharListList:::OBJECT
+this has only one value
+this.getClass().getName() == org.apache.commons.collections.primitives.adapters.CharListList.class
+===========================================================================
+org.apache.commons.collections.primitives.adapters.AbstractCharListList.AbstractCharListList():::EXIT
+===========================================================================
+org.apache.commons.collections.primitives.adapters.AbstractCharListList.getCharCollection():::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.adapters.AbstractCharListList.getCharCollection():::EXIT
+return has only one value
+return.getClass().getName() == org.apache.commons.collections.primitives.ArrayCharList.class
+===========================================================================
+org.apache.commons.collections.primitives.adapters.AbstractCollectionShortCollection:::OBJECT
+this.getClass().getName() == org.apache.commons.collections.primitives.adapters.ListShortList.class
+===========================================================================
+org.apache.commons.collections.primitives.adapters.AbstractCollectionShortCollection.AbstractCollectionShortCollection():::EXIT
+===========================================================================
+org.apache.commons.collections.primitives.adapters.AbstractCollectionShortCollection.iterator():::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.adapters.AbstractCollectionShortCollection.iterator():::EXIT
+return.getClass().getName() == org.apache.commons.collections.primitives.adapters.IteratorShortIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.adapters.AbstractCollectionShortCollection.size():::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.adapters.AbstractCollectionShortCollection.size():::EXIT
+return one of { 0, 1 }
+===========================================================================
+org.apache.commons.collections.primitives.adapters.AbstractDoubleCollectionCollection:::OBJECT
+this has only one value
+this.getClass().getName() == org.apache.commons.collections.primitives.adapters.DoubleListList.class
+===========================================================================
+org.apache.commons.collections.primitives.adapters.AbstractDoubleCollectionCollection.AbstractDoubleCollectionCollection():::EXIT
+===========================================================================
+org.apache.commons.collections.primitives.adapters.AbstractDoubleCollectionCollection.iterator():::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.adapters.AbstractDoubleCollectionCollection.iterator():::EXIT
+return.getClass().getName() == org.apache.commons.collections.primitives.adapters.DoubleIteratorIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.adapters.AbstractDoubleCollectionCollection.size():::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.adapters.AbstractDoubleCollectionCollection.size():::EXIT
+return == 1
+===========================================================================
+org.apache.commons.collections.primitives.adapters.AbstractDoubleListList:::OBJECT
+this has only one value
+this.getClass().getName() == org.apache.commons.collections.primitives.adapters.DoubleListList.class
+===========================================================================
+org.apache.commons.collections.primitives.adapters.AbstractDoubleListList.AbstractDoubleListList():::EXIT
+===========================================================================
+org.apache.commons.collections.primitives.adapters.AbstractDoubleListList.getDoubleCollection():::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.adapters.AbstractDoubleListList.getDoubleCollection():::EXIT
+return has only one value
+return.getClass().getName() == org.apache.commons.collections.primitives.ArrayDoubleList.class
+===========================================================================
+org.apache.commons.collections.primitives.adapters.AbstractListShortList:::OBJECT
+this.getClass().getName() == org.apache.commons.collections.primitives.adapters.ListShortList.class
+===========================================================================
+org.apache.commons.collections.primitives.adapters.AbstractListShortList.AbstractListShortList():::EXIT
+===========================================================================
+org.apache.commons.collections.primitives.adapters.AbstractListShortList.equals(java.lang.Object):::ENTER
+obj.getClass().getName() == org.apache.commons.collections.primitives.decorators.UnmodifiableShortList.class
+===========================================================================
+org.apache.commons.collections.primitives.adapters.AbstractListShortList.equals(java.lang.Object):::EXIT145
+===========================================================================
+org.apache.commons.collections.primitives.adapters.AbstractListShortList.equals(java.lang.Object):::EXIT145;condition="return == true"
+===========================================================================
+org.apache.commons.collections.primitives.adapters.AbstractListShortList.equals(java.lang.Object):::EXIT
+return == true
+===========================================================================
+org.apache.commons.collections.primitives.adapters.AbstractListShortList.equals(java.lang.Object):::EXIT;condition="return == true"
+===========================================================================
+org.apache.commons.collections.primitives.adapters.AbstractListShortList.getCollection():::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.adapters.AbstractListShortList.getCollection():::EXIT
+return.getClass().getName() != orig(this.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.adapters.CharIteratorIterator:::OBJECT
+this._iterator.getClass().getName() == org.apache.commons.collections.primitives.RandomAccessCharList$RandomAccessCharListIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.adapters.CharIteratorIterator.CharIteratorIterator(org.apache.commons.collections.primitives.CharIterator):::ENTER
+iterator.getClass().getName() == org.apache.commons.collections.primitives.RandomAccessCharList$RandomAccessCharListIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.adapters.CharIteratorIterator.CharIteratorIterator(org.apache.commons.collections.primitives.CharIterator):::EXIT
+this._iterator == orig(iterator)
+this._iterator.getClass().getName() == orig(iterator.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.adapters.CharIteratorIterator.hasNext():::ENTER
+this has only one value
+this._iterator has only one value
+===========================================================================
+org.apache.commons.collections.primitives.adapters.CharIteratorIterator.hasNext():::EXIT
+this._iterator == orig(this._iterator)
+this._iterator has only one value
+return == false
+this._iterator.getClass().getName() == orig(this._iterator.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.adapters.CharIteratorIterator.hasNext():::EXIT;condition="not(return == true)"
+===========================================================================
+org.apache.commons.collections.primitives.adapters.CharIteratorIterator.wrap(org.apache.commons.collections.primitives.CharIterator):::ENTER
+iterator.getClass().getName() == org.apache.commons.collections.primitives.RandomAccessCharList$RandomAccessCharListIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.adapters.CharIteratorIterator.wrap(org.apache.commons.collections.primitives.CharIterator):::EXIT
+return.getClass().getName() == org.apache.commons.collections.primitives.adapters.CharIteratorIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.adapters.CharListList:::OBJECT
+this has only one value
+this._list has only one value
+this._list.getClass().getName() == org.apache.commons.collections.primitives.ArrayCharList.class
+===========================================================================
+org.apache.commons.collections.primitives.adapters.CharListList.CharListList(org.apache.commons.collections.primitives.CharList):::ENTER
+list has only one value
+list.getClass().getName() == org.apache.commons.collections.primitives.ArrayCharList.class
+===========================================================================
+org.apache.commons.collections.primitives.adapters.CharListList.CharListList(org.apache.commons.collections.primitives.CharList):::EXIT
+this._list == orig(list)
+this._list.getClass().getName() == orig(list.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.adapters.CharListList.getCharList():::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.adapters.CharListList.getCharList():::EXIT
+this._list == return
+return == orig(this._list)
+return has only one value
+return.getClass().getName() == org.apache.commons.collections.primitives.ArrayCharList.class
+this._list.getClass().getName() == return.getClass().getName()
+return.getClass().getName() == orig(this._list.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.adapters.CharListList.wrap(org.apache.commons.collections.primitives.CharList):::ENTER
+list has only one value
+list.getClass().getName() == org.apache.commons.collections.primitives.ArrayCharList.class
+===========================================================================
+org.apache.commons.collections.primitives.adapters.CharListList.wrap(org.apache.commons.collections.primitives.CharList):::EXIT95
+===========================================================================
+org.apache.commons.collections.primitives.adapters.CharListList.wrap(org.apache.commons.collections.primitives.CharList):::EXIT
+return has only one value
+return[] == []
+return[].getClass().getName() == []
+return.getClass().getName() == org.apache.commons.collections.primitives.adapters.CharListList.class
+===========================================================================
+org.apache.commons.collections.primitives.adapters.DoubleIteratorIterator:::OBJECT
+this._iterator.getClass().getName() == org.apache.commons.collections.primitives.RandomAccessDoubleList$RandomAccessDoubleListIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.adapters.DoubleIteratorIterator.DoubleIteratorIterator(org.apache.commons.collections.primitives.DoubleIterator):::ENTER
+iterator.getClass().getName() == org.apache.commons.collections.primitives.RandomAccessDoubleList$RandomAccessDoubleListIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.adapters.DoubleIteratorIterator.DoubleIteratorIterator(org.apache.commons.collections.primitives.DoubleIterator):::EXIT
+this._iterator == orig(iterator)
+this._iterator.getClass().getName() == orig(iterator.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.adapters.DoubleIteratorIterator.hasNext():::ENTER
+this has only one value
+this._iterator has only one value
+===========================================================================
+org.apache.commons.collections.primitives.adapters.DoubleIteratorIterator.hasNext():::EXIT
+this._iterator == orig(this._iterator)
+this._iterator has only one value
+this._iterator.getClass().getName() == orig(this._iterator.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.adapters.DoubleIteratorIterator.hasNext():::EXIT;condition="return == true"
+return == true
+===========================================================================
+org.apache.commons.collections.primitives.adapters.DoubleIteratorIterator.hasNext():::EXIT;condition="not(return == true)"
+return == false
+===========================================================================
+org.apache.commons.collections.primitives.adapters.DoubleIteratorIterator.next():::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.adapters.DoubleIteratorIterator.next():::EXIT
+this._iterator == orig(this._iterator)
+return.getClass().getName() == java.lang.Double.class
+this._iterator.getClass().getName() == orig(this._iterator.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.adapters.DoubleIteratorIterator.wrap(org.apache.commons.collections.primitives.DoubleIterator):::ENTER
+iterator.getClass().getName() == org.apache.commons.collections.primitives.RandomAccessDoubleList$RandomAccessDoubleListIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.adapters.DoubleIteratorIterator.wrap(org.apache.commons.collections.primitives.DoubleIterator):::EXIT
+return.getClass().getName() == org.apache.commons.collections.primitives.adapters.DoubleIteratorIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.adapters.DoubleListList:::OBJECT
+this has only one value
+this._list has only one value
+this._list.getClass().getName() == org.apache.commons.collections.primitives.ArrayDoubleList.class
+===========================================================================
+org.apache.commons.collections.primitives.adapters.DoubleListList.DoubleListList(org.apache.commons.collections.primitives.DoubleList):::ENTER
+list has only one value
+list.getClass().getName() == org.apache.commons.collections.primitives.ArrayDoubleList.class
+===========================================================================
+org.apache.commons.collections.primitives.adapters.DoubleListList.DoubleListList(org.apache.commons.collections.primitives.DoubleList):::EXIT
+this._list == orig(list)
+this._list.getClass().getName() == orig(list.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.adapters.DoubleListList.getDoubleList():::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.adapters.DoubleListList.getDoubleList():::EXIT
+this._list == return
+return == orig(this._list)
+return has only one value
+return.getClass().getName() == org.apache.commons.collections.primitives.ArrayDoubleList.class
+this._list.getClass().getName() == return.getClass().getName()
+return.getClass().getName() == orig(this._list.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.adapters.IteratorShortIterator:::OBJECT
+this._iterator != null
+===========================================================================
+org.apache.commons.collections.primitives.adapters.IteratorShortIterator.IteratorShortIterator(java.util.Iterator):::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.adapters.IteratorShortIterator.IteratorShortIterator(java.util.Iterator):::EXIT
+this._iterator == orig(iterator)
+this._iterator.getClass().getName() == orig(iterator.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.adapters.IteratorShortIterator.hasNext():::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.adapters.IteratorShortIterator.hasNext():::EXIT
+this._iterator == orig(this._iterator)
+(return == true)  ==>  (orig(this) has only one value)
+(return == true)  ==>  (this._iterator has only one value)
+(return == true)  ==>  (this._iterator.getClass().getName() == org.apache.commons.collections.primitives.adapters.DoubleIteratorIterator.class)
+this._iterator.getClass().getName() == orig(this._iterator.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.adapters.IteratorShortIterator.hasNext():::EXIT;condition="return == true"
+this._iterator has only one value
+this._iterator.getClass().getName() == org.apache.commons.collections.primitives.adapters.DoubleIteratorIterator.class
+return == true
+orig(this) has only one value
+===========================================================================
+org.apache.commons.collections.primitives.adapters.IteratorShortIterator.hasNext():::EXIT;condition="not(return == true)"
+return == false
+===========================================================================
+org.apache.commons.collections.primitives.adapters.IteratorShortIterator.next():::ENTER
+this._iterator.getClass().getName() == org.apache.commons.collections.primitives.adapters.DoubleIteratorIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.adapters.IteratorShortIterator.next():::EXIT
+this._iterator == orig(this._iterator)
+this._iterator.getClass().getName() == org.apache.commons.collections.primitives.adapters.DoubleIteratorIterator.class
+return == 100
+this._iterator.getClass().getName() == orig(this._iterator.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.adapters.IteratorShortIterator.wrap(java.util.Iterator):::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.adapters.IteratorShortIterator.wrap(java.util.Iterator):::EXIT
+return.getClass().getName() == org.apache.commons.collections.primitives.adapters.IteratorShortIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.adapters.ListShortList:::OBJECT
+this._list != null
+this._list[] elements != null
+this._list[].getClass().getName() elements == java.lang.Double.class
+this._list[].getClass().getName() one of { [], [java.lang.Double] }
+size(this._list[]) one of { 0, 1 }
+===========================================================================
+org.apache.commons.collections.primitives.adapters.ListShortList.ListShortList(java.util.List):::ENTER
+list[] elements has only one value
+list[].getClass().getName() elements == java.lang.Double.class
+list[].getClass().getName() one of { [], [java.lang.Double] }
+size(list[]) one of { 0, 1 }
+===========================================================================
+org.apache.commons.collections.primitives.adapters.ListShortList.ListShortList(java.util.List):::EXIT
+this._list == orig(list)
+size(this._list[]) == orig(size(list[]))
+this._list[] elements has only one value
+list[] elements has only one value
+list[].getClass().getName() elements == java.lang.Double.class
+list[].getClass().getName() one of { [], [java.lang.Double] }
+this._list.getClass().getName() == orig(list.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.adapters.ListShortList.getList():::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.adapters.ListShortList.getList():::EXIT
+this._list == return
+return == orig(this._list)
+size(this._list[]) == size(return[])
+size(return[]) == orig(size(this._list[]))
+return[].getClass().getName() elements == java.lang.Double.class
+return[].getClass().getName() one of { [], [java.lang.Double] }
+size(return[]) one of { 0, 1 }
+this._list.getClass().getName() == return.getClass().getName()
+return.getClass().getName() == orig(this._list.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.decorators.BaseProxyCharCollection:::OBJECT
+this.getClass().getName() == org.apache.commons.collections.primitives.decorators.UnmodifiableCharList.class
+===========================================================================
+org.apache.commons.collections.primitives.decorators.BaseProxyCharCollection.BaseProxyCharCollection():::EXIT
+===========================================================================
+org.apache.commons.collections.primitives.decorators.BaseProxyCharList:::OBJECT
+this.getClass().getName() == org.apache.commons.collections.primitives.decorators.UnmodifiableCharList.class
+===========================================================================
+org.apache.commons.collections.primitives.decorators.BaseProxyCharList.BaseProxyCharList():::EXIT
+===========================================================================
+org.apache.commons.collections.primitives.decorators.BaseProxyShortCollection:::OBJECT
+this.getClass().getName() == org.apache.commons.collections.primitives.decorators.UnmodifiableShortList.class
+===========================================================================
+org.apache.commons.collections.primitives.decorators.BaseProxyShortCollection.BaseProxyShortCollection():::EXIT
+===========================================================================
+org.apache.commons.collections.primitives.decorators.BaseProxyShortCollection.equals(java.lang.Object):::ENTER
+this == obj
+this.getClass().getName() == obj.getClass().getName()
+===========================================================================
+org.apache.commons.collections.primitives.decorators.BaseProxyShortCollection.equals(java.lang.Object):::EXIT
+return == true
+===========================================================================
+org.apache.commons.collections.primitives.decorators.BaseProxyShortCollection.equals(java.lang.Object):::EXIT;condition="return == true"
+===========================================================================
+org.apache.commons.collections.primitives.decorators.BaseProxyShortCollection.size():::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.decorators.BaseProxyShortCollection.size():::EXIT
+return one of { 0, 1 }
+===========================================================================
+org.apache.commons.collections.primitives.decorators.BaseProxyShortList:::OBJECT
+this.getClass().getName() == org.apache.commons.collections.primitives.decorators.UnmodifiableShortList.class
+===========================================================================
+org.apache.commons.collections.primitives.decorators.BaseProxyShortList.BaseProxyShortList():::EXIT
+===========================================================================
+org.apache.commons.collections.primitives.decorators.BaseProxyShortList.getProxiedCollection():::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.decorators.BaseProxyShortList.getProxiedCollection():::EXIT
+return.getClass().getName() == org.apache.commons.collections.primitives.adapters.ListShortList.class
+===========================================================================
+org.apache.commons.collections.primitives.decorators.BaseUnmodifiableCharList:::OBJECT
+this.getClass().getName() == org.apache.commons.collections.primitives.decorators.UnmodifiableCharList.class
+===========================================================================
+org.apache.commons.collections.primitives.decorators.BaseUnmodifiableCharList.BaseUnmodifiableCharList():::EXIT
+===========================================================================
+org.apache.commons.collections.primitives.decorators.BaseUnmodifiableCharList.iterator():::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.decorators.BaseUnmodifiableCharList.iterator():::EXIT
+return.getClass().getName() == org.apache.commons.collections.primitives.decorators.UnmodifiableCharIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.decorators.BaseUnmodifiableCharList.listIterator():::ENTER
+this has only one value
+===========================================================================
+org.apache.commons.collections.primitives.decorators.BaseUnmodifiableCharList.listIterator():::EXIT
+return has only one value
+return.getClass().getName() == org.apache.commons.collections.primitives.decorators.UnmodifiableCharListIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.decorators.BaseUnmodifiableShortList:::OBJECT
+this.getClass().getName() == org.apache.commons.collections.primitives.decorators.UnmodifiableShortList.class
+===========================================================================
+org.apache.commons.collections.primitives.decorators.BaseUnmodifiableShortList.BaseUnmodifiableShortList():::EXIT
+===========================================================================
+org.apache.commons.collections.primitives.decorators.BaseUnmodifiableShortList.iterator():::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.decorators.BaseUnmodifiableShortList.iterator():::EXIT
+return.getClass().getName() == org.apache.commons.collections.primitives.decorators.UnmodifiableShortIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.decorators.BaseUnmodifiableShortList.listIterator():::ENTER
+this has only one value
+===========================================================================
+org.apache.commons.collections.primitives.decorators.BaseUnmodifiableShortList.listIterator():::EXIT
+return has only one value
+return.getClass().getName() == org.apache.commons.collections.primitives.decorators.UnmodifiableShortListIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.decorators.ProxyCharIterator:::OBJECT
+===========================================================================
+org.apache.commons.collections.primitives.decorators.ProxyCharIterator.ProxyCharIterator():::EXIT
+===========================================================================
+org.apache.commons.collections.primitives.decorators.ProxyCharIterator.hasNext():::ENTER
+this has only one value
+this.getClass().getName() == org.apache.commons.collections.primitives.decorators.UnmodifiableCharIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.decorators.ProxyCharIterator.hasNext():::EXIT
+===========================================================================
+org.apache.commons.collections.primitives.decorators.ProxyCharIterator.hasNext():::EXIT;condition="return == true"
+return == true
+===========================================================================
+org.apache.commons.collections.primitives.decorators.ProxyCharIterator.hasNext():::EXIT;condition="not(return == true)"
+return == false
+===========================================================================
+org.apache.commons.collections.primitives.decorators.ProxyCharIterator.next():::ENTER
+this has only one value
+this.getClass().getName() == org.apache.commons.collections.primitives.decorators.UnmodifiableCharIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.decorators.ProxyCharIterator.next():::EXIT
+return == 52
+===========================================================================
+org.apache.commons.collections.primitives.decorators.ProxyCharListIterator:::OBJECT
+this has only one value
+this.getClass().getName() == org.apache.commons.collections.primitives.decorators.UnmodifiableCharListIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.decorators.ProxyCharListIterator.ProxyCharListIterator():::EXIT
+===========================================================================
+org.apache.commons.collections.primitives.decorators.ProxyShortIterator:::OBJECT
+===========================================================================
+org.apache.commons.collections.primitives.decorators.ProxyShortIterator.ProxyShortIterator():::EXIT
+===========================================================================
+org.apache.commons.collections.primitives.decorators.ProxyShortIterator.next():::ENTER
+this has only one value
+this.getClass().getName() == org.apache.commons.collections.primitives.decorators.UnmodifiableShortIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.decorators.ProxyShortIterator.next():::EXIT
+return == 100
+===========================================================================
+org.apache.commons.collections.primitives.decorators.ProxyShortListIterator:::OBJECT
+this has only one value
+this.getClass().getName() == org.apache.commons.collections.primitives.decorators.UnmodifiableShortListIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.decorators.ProxyShortListIterator.ProxyShortListIterator():::EXIT
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableCharIterator:::OBJECT
+this.proxied.getClass().getName() == org.apache.commons.collections.primitives.RandomAccessCharList$RandomAccessCharListIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableCharIterator.UnmodifiableCharIterator(org.apache.commons.collections.primitives.CharIterator):::ENTER
+iterator.getClass().getName() == org.apache.commons.collections.primitives.RandomAccessCharList$RandomAccessCharListIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableCharIterator.UnmodifiableCharIterator(org.apache.commons.collections.primitives.CharIterator):::EXIT
+this.proxied == orig(iterator)
+this.proxied.getClass().getName() == orig(iterator.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableCharIterator.getIterator():::ENTER
+this has only one value
+this.proxied has only one value
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableCharIterator.getIterator():::EXIT
+this.proxied == return
+return == orig(this.proxied)
+return has only one value
+return.getClass().getName() == org.apache.commons.collections.primitives.RandomAccessCharList$RandomAccessCharListIterator.class
+this.proxied.getClass().getName() == return.getClass().getName()
+return.getClass().getName() == orig(this.proxied.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableCharIterator.wrap(org.apache.commons.collections.primitives.CharIterator):::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableCharIterator.wrap(org.apache.commons.collections.primitives.CharIterator):::EXIT86
+return == orig(iterator)
+return has only one value
+return.getClass().getName() == orig(iterator.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableCharIterator.wrap(org.apache.commons.collections.primitives.CharIterator):::EXIT88
+orig(iterator.getClass().getName()) == org.apache.commons.collections.primitives.RandomAccessCharList$RandomAccessCharListIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableCharIterator.wrap(org.apache.commons.collections.primitives.CharIterator):::EXIT
+return.getClass().getName() == org.apache.commons.collections.primitives.decorators.UnmodifiableCharIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableCharList:::OBJECT
+this.proxied.getClass().getName() == org.apache.commons.collections.primitives.ArrayCharList.class
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableCharList.UnmodifiableCharList(org.apache.commons.collections.primitives.CharList):::ENTER
+list.getClass().getName() == org.apache.commons.collections.primitives.ArrayCharList.class
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableCharList.UnmodifiableCharList(org.apache.commons.collections.primitives.CharList):::EXIT
+this.proxied == orig(list)
+this.proxied.getClass().getName() == orig(list.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableCharList.getProxiedList():::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableCharList.getProxiedList():::EXIT
+this.proxied == return
+return == orig(this.proxied)
+return.getClass().getName() == org.apache.commons.collections.primitives.ArrayCharList.class
+this.proxied.getClass().getName() == return.getClass().getName()
+return.getClass().getName() == orig(this.proxied.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableCharList.wrap(org.apache.commons.collections.primitives.CharList):::ENTER
+list.getClass().getName() == org.apache.commons.collections.primitives.ArrayCharList.class
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableCharList.wrap(org.apache.commons.collections.primitives.CharList):::EXIT82
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableCharList.wrap(org.apache.commons.collections.primitives.CharList):::EXIT
+return.getClass().getName() == org.apache.commons.collections.primitives.decorators.UnmodifiableCharList.class
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableCharListIterator:::OBJECT
+this has only one value
+this.proxied has only one value
+this.proxied.getClass().getName() == org.apache.commons.collections.primitives.RandomAccessCharList$RandomAccessCharListIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableCharListIterator.UnmodifiableCharListIterator(org.apache.commons.collections.primitives.CharListIterator):::ENTER
+iterator has only one value
+iterator.getClass().getName() == org.apache.commons.collections.primitives.RandomAccessCharList$RandomAccessCharListIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableCharListIterator.UnmodifiableCharListIterator(org.apache.commons.collections.primitives.CharListIterator):::EXIT
+this.proxied == orig(iterator)
+this.proxied.getClass().getName() == orig(iterator.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableCharListIterator.wrap(org.apache.commons.collections.primitives.CharListIterator):::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableCharListIterator.wrap(org.apache.commons.collections.primitives.CharListIterator):::EXIT95
+return == orig(iterator)
+return.getClass().getName() == orig(iterator.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableCharListIterator.wrap(org.apache.commons.collections.primitives.CharListIterator):::EXIT97
+orig(iterator) has only one value
+orig(iterator.getClass().getName()) == org.apache.commons.collections.primitives.RandomAccessCharList$RandomAccessCharListIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableCharListIterator.wrap(org.apache.commons.collections.primitives.CharListIterator):::EXIT
+return has only one value
+return.getClass().getName() == org.apache.commons.collections.primitives.decorators.UnmodifiableCharListIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableShortIterator:::OBJECT
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableShortIterator.UnmodifiableShortIterator(org.apache.commons.collections.primitives.ShortIterator):::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableShortIterator.UnmodifiableShortIterator(org.apache.commons.collections.primitives.ShortIterator):::EXIT
+this.proxied == orig(iterator)
+this.proxied.getClass().getName() == orig(iterator.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableShortIterator.getIterator():::ENTER
+this has only one value
+this.proxied has only one value
+this.proxied.getClass().getName() == org.apache.commons.collections.primitives.adapters.IteratorShortIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableShortIterator.getIterator():::EXIT
+this.proxied == return
+return == orig(this.proxied)
+return has only one value
+return.getClass().getName() == org.apache.commons.collections.primitives.adapters.IteratorShortIterator.class
+this.proxied.getClass().getName() == return.getClass().getName()
+return.getClass().getName() == orig(this.proxied.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableShortIterator.wrap(org.apache.commons.collections.primitives.ShortIterator):::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableShortIterator.wrap(org.apache.commons.collections.primitives.ShortIterator):::EXIT86
+return == orig(iterator)
+return has only one value
+return.getClass().getName() == orig(iterator.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableShortIterator.wrap(org.apache.commons.collections.primitives.ShortIterator):::EXIT88
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableShortIterator.wrap(org.apache.commons.collections.primitives.ShortIterator):::EXIT
+return.getClass().getName() == org.apache.commons.collections.primitives.decorators.UnmodifiableShortIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableShortList:::OBJECT
+this.proxied != null
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableShortList.UnmodifiableShortList(org.apache.commons.collections.primitives.ShortList):::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableShortList.UnmodifiableShortList(org.apache.commons.collections.primitives.ShortList):::EXIT
+this.proxied == orig(list)
+this.proxied.getClass().getName() == orig(list.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableShortList.getProxiedList():::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableShortList.getProxiedList():::EXIT
+this.proxied == return
+return == orig(this.proxied)
+this.proxied.getClass().getName() == return.getClass().getName()
+return.getClass().getName() == orig(this.proxied.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableShortList.wrap(org.apache.commons.collections.primitives.ShortList):::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableShortList.wrap(org.apache.commons.collections.primitives.ShortList):::EXIT82
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableShortList.wrap(org.apache.commons.collections.primitives.ShortList):::EXIT
+return.getClass().getName() == org.apache.commons.collections.primitives.decorators.UnmodifiableShortList.class
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableShortListIterator:::OBJECT
+this has only one value
+this.proxied has only one value
+this.proxied.getClass().getName() == org.apache.commons.collections.primitives.RandomAccessShortList$RandomAccessShortListIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableShortListIterator.UnmodifiableShortListIterator(org.apache.commons.collections.primitives.ShortListIterator):::ENTER
+iterator has only one value
+iterator.getClass().getName() == org.apache.commons.collections.primitives.RandomAccessShortList$RandomAccessShortListIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableShortListIterator.UnmodifiableShortListIterator(org.apache.commons.collections.primitives.ShortListIterator):::EXIT
+this.proxied == orig(iterator)
+this.proxied.getClass().getName() == orig(iterator.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableShortListIterator.wrap(org.apache.commons.collections.primitives.ShortListIterator):::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableShortListIterator.wrap(org.apache.commons.collections.primitives.ShortListIterator):::EXIT95
+return == orig(iterator)
+return.getClass().getName() == orig(iterator.getClass().getName())
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableShortListIterator.wrap(org.apache.commons.collections.primitives.ShortListIterator):::EXIT97
+orig(iterator) has only one value
+orig(iterator.getClass().getName()) == org.apache.commons.collections.primitives.RandomAccessShortList$RandomAccessShortListIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.decorators.UnmodifiableShortListIterator.wrap(org.apache.commons.collections.primitives.ShortListIterator):::EXIT
+return has only one value
+return.getClass().getName() == org.apache.commons.collections.primitives.decorators.UnmodifiableShortListIterator.class
+===========================================================================
+org.apache.commons.collections.primitives.issues.ApachePrimitivesTest0b:::OBJECT
+this has only one value
+===========================================================================
+org.apache.commons.collections.primitives.issues.ApachePrimitivesTest0b.ApachePrimitivesTest0b():::EXIT
+===========================================================================
+org.apache.commons.collections.primitives.issues.ApachePrimitivesTest0b.main(java.lang.String[]):::ENTER
+args has only one value
+args.getClass().getName() == java.lang.String[].class
+args[] == []
+args[].toString == []
+===========================================================================
+org.apache.commons.collections.primitives.issues.ApachePrimitivesTest0b.main(java.lang.String[]):::EXIT
+args[] == orig(args[])
+args[] == []
+args[].toString == []
+===========================================================================
+org.apache.commons.collections.primitives.issues.ApachePrimitivesTest0b.test0b():::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.issues.ApachePrimitivesTest0b.test0b():::EXIT
+===========================================================================
+org.apache.commons.collections.primitives.issues.ApachePrimitivesTest0b.test0c():::ENTER
+===========================================================================
+org.apache.commons.collections.primitives.issues.ApachePrimitivesTest0b.test0c():::EXIT
+Exiting Daikon.

@@ -26,53 +26,63 @@ postdoc-yuqi:
     display_name: "CHEN Yuqi"
     webpage: "https://scholar.google.com.sg/citations?user=51itJEEAAAAJ&hl=en"
     github: yuqiChen94
+    bio: "Research Fellow"
     role: postdoc
     image: /img/people/yuqi.jpg
 
 postdoc-jiaying:
     display_name: "LI Jiaying"
     webpage: "https://scholar.google.com/citations?user=nP1iwxMAAAAJ&hl=en"
+    bio: "Research Fellow"
     role: postdoc
     image: /img/people/jiayingli.jpg
 
 postdoc-long:
     display_name: "PHAM Hong Long"
+    bio: "Research Fellow"
     role: postdoc
     image: /img/people/long.jpg
 
 postdoc-richard:
     display_name: "Richard SCHUMI"
     webpage: "https://scholar.google.at/citations?user=aUrS9j0AAAAJ&hl=en"
+    bio: "Research Fellow"
     role: postdoc
     image: /img/people/richard.jpg
 
 postdoc-yueling:
     display_name: "ZHANG Yueling"
+    bio: "Research Fellow"
     role: postdoc
     image: /img/people/yueling.jpg
 
 phd-tai:
     display_name: "NGUYEN Duy Tai"
+    bio: "PhD Student"
     role: grad
     image: /img/people/tai.jpg
 
 phd-phuc:
     display_name: "NGUYEN Hua Gia Phuc"
+    bio: "PhD Student"
     role: grad
     image: /img/people/phuc.jpg
 
 phd-sunbing:
     display_name: "SUN Bing"
+    bio: "PhD Student"
     role: grad
     image: /img/people/sunbing.jpg
 
 phd-sunyang:
     display_name: "SUN Yang"
+    bio: "PhD Student"
     role: grad
     image: /img/people/sunyang.jpg
 
 phd-mengdi:
     display_name: "ZHANG Mengdi"
+    bio: "PhD Student"
     role: grad
     image: /img/people/mengdi.jpg
 
