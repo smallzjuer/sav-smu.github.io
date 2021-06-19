@@ -21,8 +21,12 @@
                 <a href="{{ site.base }}/" class="">
                     <!--<img src="{{ site.base }}/img/logo.png"
                          srcset="{{ site.base }}/img/logo@2x.png 2x"
-                         alt="Awesome" id="logo"> -->
-						<img src="{{ site.base }}/img/sav-logo_small.png" alt="SAV Group Logo" id="logo">
+                         alt="Awesome" id="logo">
+						<img src="{{ site.base }}/img/sav-logo_small.png 2x" alt="SAV Group Logo" id="logo"> -->
+					<picture>
+					  <source media="(min-width:500px)" srcset="{{ site.base }}/img/sav-logo_small.png">
+					  <img src="{{ site.base }}/img/sav-logo-3.jpg" alt="SAV Group Logo" id="logo">
+					</picture>
                 </a>
                 <ul class="nav nav-pills justify-content-center">
 
