@@ -1,0 +1,47 @@
+<h2>AFLSol Tool</h2>
+<p>The source code can be downloaded <a href="https://github.com/duytai/aflsol">here</a>.</p>
+<h2>Installation Instructions: (MacOs/Linux)</h2>
+<h3>I. Pre-requisites:</h3>
+<h4><a id="user-content-nodejs" class="anchor" href="https://github.com/duytai/aflsol#nodejs" aria-hidden="true"></a>NodeJs</h4>
+<p>If you haven&#8217;t installed NodeJS yet, run the following commands</p>
+<div class="highlight highlight-source-shell">
+<pre><span class="pl-c"># Install nvm</span>
+<a href="https://sav.sutd.edu.sg/wp-content/uploads/2018/09/Screen-Shot-2018-09-12-at-1.42.21-PM.png"><img data-attachment-id="3644" data-permalink="https://sav.sutd.edu.sg/research/afl-smart-contracts/screen-shot-2018-09-12-at-1-42-21-pm/#main" data-orig-file="https://sav.sutd.edu.sg/wp-content/uploads/2018/09/Screen-Shot-2018-09-12-at-1.42.21-PM.png" data-orig-size="804,36" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Screen Shot 2018-09-12 at 1.42.21 PM" data-image-description="" data-medium-file="https://sav.sutd.edu.sg/wp-content/uploads/2018/09/Screen-Shot-2018-09-12-at-1.42.21-PM-300x13.png" data-large-file="https://sav.sutd.edu.sg/wp-content/uploads/2018/09/Screen-Shot-2018-09-12-at-1.42.21-PM.png" class="alignnone wp-image-3644" src="https://sav.sutd.edu.sg/wp-content/uploads/2018/09/Screen-Shot-2018-09-12-at-1.42.21-PM.png" alt="" width="625" height="28" srcset="https://sav.sutd.edu.sg/wp-content/uploads/2018/09/Screen-Shot-2018-09-12-at-1.42.21-PM.png 804w, https://sav.sutd.edu.sg/wp-content/uploads/2018/09/Screen-Shot-2018-09-12-at-1.42.21-PM-300x13.png 300w, https://sav.sutd.edu.sg/wp-content/uploads/2018/09/Screen-Shot-2018-09-12-at-1.42.21-PM-768x34.png 768w" sizes="(max-width: 625px) 100vw, 625px" /></a>
+<span class="pl-c"># Install latest node
+</span>nvm install node
+</pre>
+</div>
+<h4><a id="user-content-install-solcjs" class="anchor" href="https://github.com/duytai/aflsol#install-solcjs" aria-hidden="true"></a>Solcjs</h4>
+<div class="highlight highlight-source-shell">
+<pre><span class="pl-c"># Install solcjs
+npm i -g solc</span>
+</pre>
+</div>
+<h3><a id="user-content-install-our-tools" class="anchor" href="https://github.com/duytai/aflsol#install-our-tools" aria-hidden="true"></a>II. Install aflsol</h3>
+<div class="highlight highlight-source-shell">
+<pre>npm i -g aflsol</pre>
+</div>
+<h3>III. Usage</h3>
+<h4><a id="user-content-how-to-fuzz" class="anchor" href="https://github.com/duytai/aflsol#how-to-fuzz" aria-hidden="true"></a>1. How to fuzz</h4>
+<ol>
+<li>Create Project folder</li>
+</ol>
+<div class="highlight highlight-source-shell">
+<pre>cd [your_project_folder]
+# create 2 folders: contracts and testcases under[your_project_folder]
+aflsol init</pre>
+</div>
+<ol start="2">
+<li>Copy .abi and .bin file of your contract to contracts/ folder.</li>
+<li>Run fuzz in your project folder, for example: your abi file name is <code>fuzzer.abi</code></li>
+</ol>
+<div class="highlight highlight-source-shell">
+<pre>cd [your_project_folder]
+aflsol fuzz fuzzer.abi 600 # 600 is duration in seconds</pre>
+<p>You should see some thing like this in your console:</p>
+<p><a href="https://sav.sutd.edu.sg/wp-content/uploads/2018/09/Screen-Shot-2018-09-11-at-3.24.09-PM.png"><img data-attachment-id="3610" data-permalink="https://sav.sutd.edu.sg/screen-shot-2018-09-11-at-3-24-09-pm/" data-orig-file="https://sav.sutd.edu.sg/wp-content/uploads/2018/09/Screen-Shot-2018-09-11-at-3.24.09-PM.png" data-orig-size="872,284" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Screen Shot 2018-09-11 at 3.24.09 PM" data-image-description="" data-medium-file="https://sav.sutd.edu.sg/wp-content/uploads/2018/09/Screen-Shot-2018-09-11-at-3.24.09-PM-300x98.png" data-large-file="https://sav.sutd.edu.sg/wp-content/uploads/2018/09/Screen-Shot-2018-09-11-at-3.24.09-PM.png" class="alignnone wp-image-3610" src="https://sav.sutd.edu.sg/wp-content/uploads/2018/09/Screen-Shot-2018-09-11-at-3.24.09-PM.png" alt="" width="531" height="173" srcset="https://sav.sutd.edu.sg/wp-content/uploads/2018/09/Screen-Shot-2018-09-11-at-3.24.09-PM.png 872w, https://sav.sutd.edu.sg/wp-content/uploads/2018/09/Screen-Shot-2018-09-11-at-3.24.09-PM-300x98.png 300w, https://sav.sutd.edu.sg/wp-content/uploads/2018/09/Screen-Shot-2018-09-11-at-3.24.09-PM-768x250.png 768w" sizes="(max-width: 531px) 100vw, 531px" /></a></p>
+<h4>2. Aflsol important options</h4>
+<p>aflsol &#8211;help: display all options supported in aflsol.</p>
+<p>aflsol init: create working folders for aflsol.</p>
+<p>aflsol fuzz [abi file] [duration in second]</p>
+</div>
