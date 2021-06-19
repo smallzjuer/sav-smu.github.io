@@ -1,0 +1,45 @@
+---
+layout: default
+title: Lock and Immutability Checkers for Concurrent Programs
+---
+
+
+
+
+
+
+<p><em><a href="./lock-immutability-checkers/immutability_online_latest.xlsx">@immutability_related_issues</a> and <a href="./lock-immutability-checkers/Client-side-Lock-Bugs_latest_checker_online.xlsx" rel="">@entailLocking_related_issues</a> NEWS: </em></p>
+<ul>
+<li><em>Sep 25,2015: Concurrency bug reported to <strong>Camel</strong> has been resolved. <a href="http://camel.465427.n5.nabble.com/report-a-possible-race-issue-td5771741.html">Details are here</a>.</em></li>
+<li><em>Sep 23, 2015: Concurrency bug reported to <strong>k9mail</strong> has been confirmed. <a href="https://github.com/k9mail/k-9/issues/809#issuecomment-142452582">Details are here</a>.</em></li>
+<li><em>Sep 23, 2015: Concurrency bug reported to <strong>facebook/presto</strong> have been confirmed. <a href="https://github.com/facebook/presto/issues/3647#issuecomment-142333147">Details are here</a>. </em></li>
+<li><em>Sep 23, 2015: Concurrency bug reported to <strong>crate</strong> have been confirmed. <a href="https://github.com/crate/crate/issues/2622#issuecomment-142235965">Details are here</a>. </em></li>
+<li><em>Sep 23, 2015: Concurrency bug reported to <strong>hazelcast</strong> has been confirmed. <a href="https://github.com/hazelcast/hazelcast/issues/6273#issuecomment-142224627">Details are here</a>. </em></li>
+<li><em>Sep 22, 2015: Concurrency bug reported to <strong>mrniko/redisson</strong> lead to code refactoring. <a href="https://github.com/mrniko/redisson/issues/251#issuecomment-142369641">Details are here.</a></em></li>
+<li><em>Sep 22, 2015: Concurrency bugs reported to <strong>dianping/cat</strong></em> <em>have been confirmed! <a href="https://github.com/dianping/cat/issues/884#issuecomment-142218010">Details are here</a>.</em></li>
+<li><em>Sep 21, 2015: Concurrency bugs reported to <strong>mozilla/mozStumbler</strong> have been confirmed! <a href="https://github.com/mozilla/MozStumbler/issues/1718#issuecomment-141955500">Details are here</a>.</em></li>
+</ul>
+<p>This page contains our research on identifying concurrency-related issues in real-world programs.</p>
+<p class="p1">Concurrent Programs are hard to analyze or debug due to the complex program logic and unpredictable execution environment. According to Lu et al. [1], wrong assumptions on synchronization/ordering intentions are usually responsible for many concurrency bugs. However, we observe that even when programmers have correct intentions of synchronization, they may still write programs with concurrency issues due to the lack of understanding to certain concurrency-related API. Thus our work aims at enforcing correct usage of concurrency related APIs. We adopt natural language processing techniques to analyze Java API specifications to extract annotations related to common concurrency-related issues. Then we systematically detect misuse of those APIs with the extracted annotations.</p>
+<p class="p1">We adopt the <a href="http://nlp.stanford.edu/software/lex-parser.shtml">Stanford Parser</a> for the purpose of natural language parsing, specifically dependency parsing. Then we extract annotations from the dependency trees, which are the parse result of the Stanford Parser. We are especially interested in five kinds of annotations, i.e., @threadsafe, @!threadsafe, @immutable, @!reentrant and @!entailLocking. We processed the <a href="https://docs.oracle.com/javase/8/docs/api/">Java SE 8 API</a> specification and the full list of annotations extracted can be found <a href="./lock-immutability-checkers/Annotations.txt">here</a>.</p>
+<p class="p1">To show how we can detect potential concurrency related issues with the extracted annotations, we crawled the top 1k most popular projects from GitHub. We then detected potential concurrency issues related to @immutable and @!entailLocking type annotations since they are under-supported. We report the list of potential issues (<a href="./lock-immutability-checkers/immutability_online_latest.xlsx">@immutability_related_issues</a> and <a href="./lock-immutability-checkers/Client-side-Lock-Bugs_latest_checker_online.xlsx" rel="">@entailLocking_related_issues</a>) that are found by our method. We&#8217;ve reported the found issues to the corresponding developers and received responses from <strong>12 </strong>projects, among which <strong>8</strong> confirm that the found issues are real bugs in their projects. We pick some responses (including both confirmations and false positives) from the developers here:</p>
+<ul>
+<li><em>&#8220;Analysis is somehow correct because using &#8220;subContexts&#8221; as lock to prevent concurrent remove-and-get-remaining-size operations is misleading and should use a dedicated lock or should be eliminated by using a atomic counter for the number of entries inside the map. This is now <strong>fixed</strong> by <a class="commit-link" href="https://github.com/crate/crate/commit/e710e3622f30517bc13c09a5dd37bf7e59a5933e"><tt>e710e36</tt></a>&#8220;</em></li>
+<li><em>&#8220;I do agree there is a potential race if and only if concurrent deployment of Atmosphere&#8217;s components occurs, but that condition cannot happens with the current architecture.&#8221;</em></li>
+<li><em>&#8220;I have <strong>removed</strong> that synchronized as it was not needed to guard that during setup / tear down of the unit tests as that happens single threaded anyway. &#8220;</em></li>
+<li class="p1"><em>&#8220;The issue found by your tool is <strong>indeed a bug</strong>.The surrounding code also contains a few concurrency issues.&#8221; </em></li>
+<li class="p1"><em>&#8220;As for lock-free implementation of entry&#8217;s resources counter managed by <code>release</code>/<code>aquire</code> methods it&#8217;s done a little bit ugly with while statements and so on&#8230; Anyway I had <strong>refactored</strong> this code. &#8221; </em></li>
+<li class="p1"><em>&#8220;So while formally there is a concurrency issue, in practice there is no issue, and a formal removal of the issue would cause severe contention issues at runtime&#8230;&#8221;</em></li>
+<li class="p1"><em>&#8220;&#8230;this is a known <strong>benign</strong> race, we accept that we go over <code>K</code> in some cases, since this code runs on a performance sensitive path&#8221;</em></li>
+</ul>
+<p class="p1"><strong>The Checkers:</strong></p>
+<p class="p1">We developed a locker-checker based on the Checker Framework for the purpose of detecting @entailLocking related issues. For the purpose of detecting @immutability issues, we extended the Javari Checker, which is a build in checker in the Checker Framework. The jar files of the checkers are downloadable <a href="./lock-immutability-checkers/checkers.zip" rel="">here</a> (including checker.jar, checker_qual.jar). Replace the corresponding files of the Checker Framework (downloadable <a href="http://types.cs.washington.edu/checker-framework/">here</a>) in path <em>checker-framework/checker/dist</em> with them and run the Checker Framework following the steps described <a href="http://types.cs.washington.edu/checker-framework/current/checker-framework-manual.html#using-a-checker">here</a>.</p>
+<p class="p1">An example failure reported by the locker-checker looks like this:</p>
+<h5 class="p1"><span class="s1">[ERROR] /Users/ls/Research/concurrency/git_source/mrniko/redisson/src/main/java/org/redisson/RedissonLock.java:[80,29] error: [redundancy.locking] There is redundancy lock: the concurrent collection guarantees thread-safety for read/write on single entries.</span></h5>
+<h5 class="p1"><span class="s1">[ERROR] /Users/ls/Research/concurrency/git_source/mrniko/redisson/src/main/java/org/redisson/RedissonLock.java:[59,88] error: [assignment.type.incompatible] incompatible types in assignment.</span></h5>
+<h5 class="p1"><span class="s1">[ERROR] -&gt; [Help 1]</span></h5>
+<h5 class="p1"><span class="s1">org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.3:compile (default-compile) on project redisson: Compilation failure</span></h5>
+<p class="p1">&#8230;</p>
+<p class="p1">We will keep this website updated if we find more bugs or received confirmations from the programmers. Please contact shuang_liu@sutd.edu.sg if there are any questions.</p>
+<p>&nbsp;</p>
+<p class="p1">[1] S. Lu, S. Park, E. Seo, and Y. Zhou. Learning from mistakes: A comprehensive study on real world concurrency bug characteristics. In Proceedings of the 13th International Conference on Architectural Support for Programming Languages and Operating Systems, ASPLOS XIII, pages 329–339, New York, USA, 2008. ACM.</p>
