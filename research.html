@@ -11,9 +11,9 @@ title: Research Projects
 
 <div class="card-columns">
     {% comment %}
-    Sort the projects by date, putting those without dates last
+    Sort the projects by title
     {% endcomment %}
-    {% assign projects_by_title = site.projects | sort: 'last-updated', 'first' %}
+    {% assign projects_by_title = site.projects | sort: 'title', 'first' %}
     {% for p in projects_by_title %}
 		{% if p.active %}
         	{% include project-card.html project=p %}
@@ -29,9 +29,9 @@ title: Research Projects
 
 <div class="card-columns">
     {% comment %}
-    Sort the projects by date, putting those without dates last
+    Sort the projects by title
     {% endcomment %}
-    {% assign projects_by_title = site.projects | sort: 'last-updated', 'first' %}
+    {% assign projects_by_title = site.projects | sort: 'title', 'first' %}
     {% for p in projects_by_title %}
 		{% if p.active == false %}
         	{% include project-card.html project=p %}
