@@ -19,7 +19,7 @@ https://jekyllrb.com/docs/
 Updating Site Content
 ---------------------
 
-GitHub Pages will automatically build the project and posts from the templates. You only need to commit/push the templates, NOT the built pages.
+GitHub Pages will automatically build the projects and posts from the templates. You only need to commit/push the templates, NOT the built pages.
 
 For adding/updating group members, go to ./_data/people.yml. Do NOT change the unique identifiers (e.g. 'prof-sunjun'), even if the role changes, as this may accidentally break project pages.
 
@@ -28,6 +28,19 @@ For adding/updating projects, create/modify the .md files in ./_projects. Note t
 For adding news posts, create a file ./_posts/YYYY-MM-DD-title-of-news-post.md. Follow the template of existing posts. Note that our Twitter account will automatically tweet a link to any newly created news posts, so please test locally first.
 
 Supplementary materials (e.g. self-contained mini-sites) should be placed in ./supplementary-material. Follow the template of existing pages to automatically generate layout.
+
+Building/Testing Locally
+------------------------
+
+First, clone this repository on your local machine.
+
+In the root directory, use this:
+
+    bundle exec jekyll serve
+
+Then access/test the site locally at: http://localhost:4000
+
+Please do test all changes locally before deploying.
 
 Updating Publication List
 -------------------------
@@ -41,18 +54,6 @@ To do this, update the BibTeX file in ./bibs/pubs.bib. Then, in the root directo
 This will transform the BibTeX into HTML. Commit and push the output, which will automatically be included.
 
 (Note that Chris will do this automatically whenever a new paper appears on Sun Jun's / mine DBLP page.)
-
-
-Building/Testing Locally
-------------------------
-
-In the root directory, use this:
-
-    bundle exec jekyll serve
-
-Then access/test the site locally at: http://localhost:4000
-
-Please do test all changes locally before deploying.
 
 Help
 ----
