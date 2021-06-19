@@ -24,7 +24,7 @@ last-updated: 2021-05-24
 			<span class="authors">
 				Li Li, Jun Sun, Yang Liu, Meng Sun, and Jin Song Dong.
 			</span><br />
-			<span style="color:grey;"><span class="venuetype"></span><span class="venue">IEEE Trans. Software Eng. 44(8)</span>. <br />Tool and Models: <a href="http://lilissun.github.io/r/time_files/Darwin-x86_64-v0.1.5.zip" class="tool">Darwin-x86_64-v0.1.5.zip</a>
+			<span style="color:grey;"><span class="venuetype"></span><span class="venue">IEEE Trans. Software Eng. 44(8)</span></span>. <br /><span class="tool">Tool and Models: <a href="http://lilissun.github.io/r/time_files/Darwin-x86_64-v0.1.5.zip" class="tool-link">Darwin-x86_64-v0.1.5.zip</a></span>
 			<br />
 			<span class="links">
 </span>
@@ -35,7 +35,7 @@ last-updated: 2021-05-24
 			<span class="authors">
 				Li Li, Jun Sun, and Jin Song Dong.
 			</span><br />
-			<span style="color:grey;"><span class="venuetype"></span><span class="venue">FM 2016: Formal Methods - 21st International Symposium, Limassol, Cyprus, November 9-11, 2016, Proceedings</span>. <br />Tool and Models: <a href="http://lilissun.github.io/r/time_files/Darwin-x86_64-v0.1.4.zip" class="tool">Darwin-x86_64-v0.1.4.zip</a>
+			<span style="color:grey;"><span class="venuetype"></span><span class="venue">FM 2016: Formal Methods - 21st International Symposium, Limassol, Cyprus, November 9-11, 2016, Proceedings</span></span>. <br /><span class="tool">Tool and Models: <a href="http://lilissun.github.io/r/time_files/Darwin-x86_64-v0.1.4.zip" class="tool-link">Darwin-x86_64-v0.1.4.zip</a></span>
 			<br />
 			<span class="links">
 </span>
@@ -46,7 +46,7 @@ last-updated: 2021-05-24
 			<span class="authors">
 				Li Li, Jun Sun, Yang Liu, and Jin Song Dong.
 			</span><br />
-			<span style="color:grey;"><span class="venuetype"></span><span class="venue">FM 2015: Formal Methods - 20th International Symposium, Oslo, Norway, June 24-26, 2015, Proceedings</span>. <br />Tool and Models: <a href="http://lilissun.github.io/r/time_files/Darwin-x86_64-v0.0.9.zip" class="tool">Darwin-x86_64-v0.0.9.zip</a>
+			<span style="color:grey;"><span class="venuetype"></span><span class="venue">FM 2015: Formal Methods - 20th International Symposium, Oslo, Norway, June 24-26, 2015, Proceedings</span></span>. <br /><span class="tool">Tool and Models: <a href="http://lilissun.github.io/r/time_files/Darwin-x86_64-v0.0.9.zip" class="tool-link">Darwin-x86_64-v0.0.9.zip</a></span>
 			<br />
 			<span class="links">
 </span>
@@ -57,7 +57,7 @@ last-updated: 2021-05-24
 			<span class="authors">
 				Li Li, Jun Sun, Yang Liu, and Jin Song Dong.
 			</span><br />
-			<span style="color:grey;"><span class="venuetype"></span><span class="venue">Formal Methods and Software Engineering - 16th International Conference on Formal Engineering Methods, ICFEM 2014, Luxembourg, Luxembourg, November 3-5, 2014. Proceedings</span>. <br />Tool and Models: <a href="http://lilissun.github.io/r/time_files/model.zip" class="tool">model.zip</a>; <a href="http://lilissun.github.io/r/time_files/Darwin-x86_64-v0.0.7.zip" class="tool">Darwin-x86_64-v0.0.7.zip</a>
+			<span style="color:grey;"><span class="venuetype"></span><span class="venue">Formal Methods and Software Engineering - 16th International Conference on Formal Engineering Methods, ICFEM 2014, Luxembourg, Luxembourg, November 3-5, 2014. Proceedings</span></span>. <br /><span class="tool">Tool and Models: <a href="http://lilissun.github.io/r/time_files/model.zip" class="tool-link">model.zip</a>; <a href="http://lilissun.github.io/r/time_files/Darwin-x86_64-v0.0.7.zip" class="tool-link">Darwin-x86_64-v0.0.7.zip</a></span>
 			<br />
 			<span class="links">
 </span>

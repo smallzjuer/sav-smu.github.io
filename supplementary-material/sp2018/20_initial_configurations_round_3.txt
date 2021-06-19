@@ -1,0 +1,65 @@
+Results for classifiers learnt from 20 initial configurations.
+
+========
+TABLE II
+========
+
+model type           accuracy    cross-validation     sensitivity    specificity
+SVM-linear            44.00%          52.07%             51.01%         37.06%
+SVM-polynomial        58.09%          53.07%             63.04%         53.14%
+SVM-RBF               94.51%          94.79%             99.09%         89.94%
+
+
+
+=========
+TABLE III
+=========
+
+number of mutants        effective mutants         accuracy           cross-validation      
+300                             40                  85.01%               83.56%   
+400                             61                  89.18%               90.01%
+500                             79                  93.13%               93.59%
+600                             98                  94.13%               94.77%
+700                             108                 94.51%               94.79%
+
+
+========
+TABLE IV
+========
+#time interval       accuracy     cross-validation
+100                   94.01%          93.68%
+150                   94.73%          92.17%
+200                   93.47%          94.67%
+250                   94.51%          94.79%
+300                   94.54%          95.51%
+=======
+TABLE V
+=======
+
+attack #             detected         accuracy
+1                       yes            93.47%
+2                       yes            91.11%
+3                       yes            75.76%   
+4                       yes            99.19%       
+5                       yes            96.28%
+6                       yes            94.42%
+7                       yes            65.19%
+8                       yes            96.09%
+9                       yes            91.91%
+10                      yes            93.17%
+11                      yes            95.04%
+12                      yes            96.18%
+13                      yes            95.74%
+14                      yes            94.57%
+15                      yes            96.66%
+           
+========
+TABLE VI
+========
+attack stage   # effective mutants        # detected     accuracy (detected)    accuracy (all)
+PLC1                    8                      5               99.31%               73.14%    
+PLC3                   20                     17               99.81%               90.91%
+PLC4                    5                      4               98.15%               92.07%
+PLC5                    2                      2               99.54%               98.88%                     
+PLC6                    5                      5               99.00%               99.07%
+summary                40                     33               99.85%               90.17%
