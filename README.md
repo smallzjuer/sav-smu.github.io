@@ -27,7 +27,7 @@ For adding/updating projects, create/modify the .md files in ./_projects. Note t
 
 For adding news posts, create a file ./_posts/YYYY-MM-DD-title-of-news-post.md. Follow the template of existing posts. Note that our Twitter account will automatically tweet a link to any newly created news posts, so please test locally first.
 
-Supplementary materials (e.g. self-contained mini-sites) should be placed in ./supplementary-material. Follow the template of existing pages to automatically generate layout.
+Supplementary materials (e.g. self-contained mini-sites) should be placed in ./supplementary-material. Follow the template of existing pages to automatically generate the standard layout.
 
 Building/Testing Locally
 ------------------------
@@ -51,7 +51,7 @@ To do this, update the BibTeX file in ./bibs/pubs.bib. Then, in the root directo
 
      bundle exec make
 
-This will transform the BibTeX into HTML. Commit and push the output, which will automatically be included.
+This will transform the BibTeX into HTML. Simply commit/push the updated file after running the above.
 
 (Note that Chris will do this automatically whenever a new paper appears on Sun Jun's / mine DBLP page.)
 
