@@ -1,4 +1,5 @@
 ---
+title: Lee Kuan Yew Fellowship
 layout: post
 shortnews: true
 icon: newspaper-o

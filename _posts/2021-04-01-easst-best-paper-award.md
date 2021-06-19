@@ -1,4 +1,5 @@
 ---
+title: EASST Best Paper Award
 layout: post
 shortnews: true
 icon: newspaper-o
