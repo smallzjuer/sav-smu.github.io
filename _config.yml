@@ -9,6 +9,9 @@ highlighter: pygments
 # The path structure for blog posts.
 permalink: /news/:year/:month/:day/:title.html
 
+plugins:
+  - jekyll-feed
+
 # Sections on the "people" page.
 roles:
   - key: faculty
