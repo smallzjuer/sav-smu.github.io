@@ -30,13 +30,6 @@ postdoc-yuqi:
     role: postdoc
     image: /img/people/yuqi.jpg
 
-postdoc-jiaying:
-    display_name: "LI Jiaying"
-    webpage: "https://scholar.google.com/citations?user=nP1iwxMAAAAJ&hl=en"
-    bio: "Research Fellow"
-    role: postdoc
-    image: /img/people/jiayingli.jpg
-
 postdoc-long:
     display_name: "PHAM Hong Long"
     bio: "Research Fellow"
@@ -127,6 +120,13 @@ alum-loc:
     role: alum
     bio: "Research Fellow"
     webpage: "https://loc.bitbucket.io/"
+
+postdoc-jiaying:
+    display_name: "LI Jiaying"
+    webpage: "https://scholar.google.com/citations?user=nP1iwxMAAAAJ&hl=en"
+    bio: "Research Fellow"
+    role: alum
+    image: /img/people/jiayingli.jpg
 
 alum-lili:
     display_name: "LI Li"

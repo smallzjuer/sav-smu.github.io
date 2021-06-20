@@ -6,6 +6,9 @@ description: |
 
 people:
   - prof-sunjun
+  - postdoc-long
+  - postdoc-yueling
+  - phd-sunbing
   - phd-mengdi
 
 active: true
