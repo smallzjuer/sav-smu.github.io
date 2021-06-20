@@ -53,6 +53,6 @@ Smart contracts are blockchain based contracts which bind multiple parties throu
 			<span class="links">
 </span>
 
-## Additional Materials
+## Tools
 
-- [sFuzz – Smart Fuzzing Contracts](/supplementary-material/sfuzz.html)
+- [sFuzz – Smart Fuzzing Contracts](/software-toolkits.html#sfuzz)

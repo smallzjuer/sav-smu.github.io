@@ -8,5 +8,5 @@ people:
   - prof-sunjun
 
 layout: project
-link: "https://pat.comp.nus.edu.sg/"
+link: "/software-toolkits.html#pat"
 ---
