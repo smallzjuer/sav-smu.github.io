@@ -50,6 +50,8 @@ navigation:
     link: /#people
   - title: Research
     link: /research.html
+  - title: Software
+    link: /software.html
   - title: Publications
     link: /publications.html
   - title: Open Positions
