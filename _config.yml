@@ -50,9 +50,9 @@ navigation:
     link: /#people
   - title: Research
     link: /research.html
-  - title: Software
-    link: /software.html
+  - title: Tools
+    link: /software-toolkits.html
   - title: Publications
     link: /publications.html
-  - title: Open Positions
+  - title: Positions
     link: /vacancies.html
