@@ -8,6 +8,7 @@ people:
   - prof-sunjun
   - prof-cposkitt
   - postdoc-yuqi
+  - yifan
 
 active: true
 

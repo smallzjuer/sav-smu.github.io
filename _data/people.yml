@@ -51,10 +51,17 @@ postdoc-yueling:
 
 gaobo:
     display_name: "GAO Bo"
-    bio: "PhD Student"
+    bio: "PhD Student (SUTD)"
     role: grad
     image: /img/people/gaobo.jpg
     webpage: "https://istd.sutd.edu.sg/people/phd-students/gao-bo"
+
+yifan:
+    display_name: "Yifan JIA"
+    bio: "PhD Student (SUTD/TUV)"
+    role: grad
+    image: /img/people/yifan.jpg
+    webpage: "https://sg.linkedin.com/in/jia-yifan-a704403b"
 
 phd-tai:
     display_name: "NGUYEN Duy Tai"
@@ -115,6 +122,12 @@ alum-jianye:
     role: alum
     bio: "SUTD-MIT Research Fellow"
     webpage: "https://www.linkedin.com/in/hao-jianye-7ba18b18"
+
+alum-teckping:
+    display_name: "KHOO Teck Ping"
+    role: alum
+    bio: "PhD Student"
+    webpage: "https://sg.linkedin.com/in/teck-ping-khoo-phd-919572109"
 
 alum-pingfan:
     display_name: "KONG Pingfan"
