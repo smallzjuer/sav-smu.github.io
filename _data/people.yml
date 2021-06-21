@@ -195,6 +195,11 @@ alum-david:
     bio: "Research Fellow"
     webpage: "https://www3.ntu.edu.sg/home/sanan/"
 
+alum-shiling:
+    display_name: "SHI Ling"
+    role: alum
+    bio: "Research Fellow"
+
 alum-tth:
     display_name: "TAN Tian Huat"
     role: alum
@@ -217,6 +222,11 @@ alum-wy:
     role: alum
     bio: "Research Fellow"
     webpage: "https://sg.linkedin.com/in/yongzheng-wu-06476169"
+
+alum-xiaohao:
+    display_name: "XIAO Hao"
+    role: alum
+    bio: "Research Assistant"
 
 alum-shaojie:
     display_name: "ZHANG Shaojie"
