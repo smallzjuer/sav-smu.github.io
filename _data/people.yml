@@ -166,6 +166,12 @@ alum-swl:
     bio: "Research Fellow"
     webpage: "https://personal.ntu.edu.sg/shang-wei.lin/"
 
+alum-linyun:
+    display_name: "LIN Yun"
+    role: alum
+    bio: "Visiting Researcher"
+    webpage: "http://linyun.info/"
+
 alum-lg:
     display_name: "LIU Guanjun"
     role: alum
