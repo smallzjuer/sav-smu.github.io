@@ -49,6 +49,13 @@ postdoc-yueling:
     role: postdoc
     image: /img/people/yueling.jpg
 
+gaobo:
+    display_name: "GAO Bo"
+    bio: "PhD Student"
+    role: grad
+    image: /img/people/gaobo.jpg
+    webpage: "https://istd.sutd.edu.sg/people/phd-students/gao-bo"
+
 phd-tai:
     display_name: "NGUYEN Duy Tai"
     bio: "PhD Student"

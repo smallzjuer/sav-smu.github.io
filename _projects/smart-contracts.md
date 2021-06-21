@@ -8,6 +8,7 @@ people:
   - prof-sunjun
   - postdoc-long
   - postdoc-richard
+  - gaobo
   - phd-tai
 
 active: true
