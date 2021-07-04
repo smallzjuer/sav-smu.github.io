@@ -68,6 +68,7 @@ phd-tai:
     bio: "PhD Student"
     role: grad
     image: /img/people/tai.jpg
+    webpage: https://sg.linkedin.com/in/tai-duy-nguyen-bb703013b
 
 phd-phuc:
     display_name: "NGUYEN Hua Gia Phuc"
