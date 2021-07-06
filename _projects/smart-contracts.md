@@ -22,6 +22,17 @@ Smart contracts are blockchain based contracts which bind multiple parties throu
 ## Key Publications
 
 <span class="pubtitle">
+			<a href="https://arxiv.org/abs/2101.01917">sGuard: Towards Fixing Vulnerable Smart Contracts Automatically</a>.
+			</span><br />
+			<span class="authors">
+				Tai D. Nguyen, Long H. Pham, Jun Sun.
+			</span><br />
+			<span style="color:grey;"><span class="venuetype"></span><span class="venue">2021 IEEE Symposium on Security and Privacy, SP 2021, May 24-27, 2021</span></span>.
+			<br />
+			<span class="links">
+</span>
+
+<span class="pubtitle">
 				<a href="https://doi.org/10.1109/SP40000.2020.00066">Semantic Understanding of Smart Contracts: Executable Operational Semantics of Solidity</a>.
 			</span><br />
 			<span class="authors">
@@ -33,7 +44,7 @@ Smart contracts are blockchain based contracts which bind multiple parties throu
 </span>
 
 <span class="pubtitle">
-				<a href="https://doi.org/10.1145/3377811.3380334">sFuzz: an efficient adaptive fuzzer for solidity smart contracts</a>.
+			<a href="https://arxiv.org/abs/2004.08563">sFuzz: an efficient adaptive fuzzer for solidity smart contracts</a>.
 			</span><br />
 			<span class="authors">
 				Tai D. Nguyen, Long H. Pham, Jun Sun, Yun Lin, and Quang Tran Minh.
