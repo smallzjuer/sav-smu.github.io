@@ -22,17 +22,6 @@ Neural networks can be (arguably) viewed a different paradigm of programming, wh
 ## Key Publications
 
 <span class="pubtitle">
-				<a href="https://arxiv.org/abs/2007.11206">SOCRATES: Towards a Unified Platform for Neural Network Analysis</a>.
-			</span><br />
-			<span class="authors">
-				Long H. Pham, Jiaying Li, Jun Sun.
-			</span><br />
-			<span style="color:grey;"><span class="venuetype"></span><span class="venue">Preprint</span></span>.
-			<br />
-			<span class="links">
-</span>
-
-<span class="pubtitle">
 				<a href="https://doi.org/10.1007/978-3-030-72016-2_21">Improving Neural Network Verification through Spurious Region Guided Refinement</a>.
 			</span><br />
 			<span class="authors">
